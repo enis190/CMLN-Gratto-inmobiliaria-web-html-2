@@ -1,0 +1,55 @@
+.home_trayectoria {
+    background-color: $COLOR_2;
+    padding-top: 100px;
+    padding-bottom: 70px;
+
+    p {
+        color: #4F6A53;
+    }
+
+    .block-min {
+        
+        .d-block {
+            border-left: 1px solid #4F6A53;
+            padding-left: 20px;
+            padding-right: 30px;
+
+            h3 {
+                color: #4F6A53;
+                font-family: 'ScopeOne-Regular';
+                font-size: 2.5rem;
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .block-super{
+        h2, h3{
+            color: #252625;
+            font-family: 'ScopeOne-Regular';
+            font-size: 14rem;
+        }
+        h2{
+                line-height: 14rem;
+        }
+        h3{
+            font-size: 2rem;
+        }
+    }
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
