@@ -1,0 +1,62 @@
+.home_estetica {
+    padding-bottom: 70px;
+    padding-top: 70px;
+    background-color: $COLOR_4;
+
+    .img {
+        height: 440px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .txt {
+        display: flex;
+
+        .d-block {
+            background-color: $COLOR_3;
+            width: 100%;
+            padding: 20px;
+            position: relative;
+
+            p {
+                font-family: 'WorkSans-Light';
+                position: absolute;
+                bottom: 0;
+                padding-bottom: 30px;
+                padding-right: 30px;
+            }
+        }
+    }
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .home_estetica {
+        .txt {
+            .d-block {
+                h2 {
+                    width: 250px;
+                }
+            }
+        }
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

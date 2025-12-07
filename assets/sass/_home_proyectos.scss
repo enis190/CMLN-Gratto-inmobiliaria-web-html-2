@@ -1,0 +1,155 @@
+.home_proyectos {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: $COLOR_1;
+
+    form {
+
+
+
+
+        .content-control {
+            position: relative;
+
+            label {
+                color: #B8C1B9;
+                font-family: 'WorkSans-Regular';
+                position: absolute;
+            }
+
+            select {
+                margin-top: 30px;
+                background-color: $COLOR_1;
+                color: #939A94;
+
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+
+                /* Mover la flecha 1.5rem (aprox. 15px) a la izquierda */
+                background-position: right .5rem center;
+                background-repeat: no-repeat;
+                background-size: 0.8em;
+                /* Tamaño de la flecha (ajusta si es necesario) */
+
+                /* 4. Dar espacio al texto para que no se encime sobre la flecha */
+                padding-right: 2rem;
+
+                border-radius: 3px;
+            }
+        }
+
+        .btn-1 {
+            margin-top: 30px;
+        }
+    }
+
+    .blocks-1 {
+        .proyecto {
+            .img {
+                height: 440px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .det {
+                padding: 10px;
+                border: 1px solid #5C605D;
+
+                p {
+                    color: #F5F1E6;
+                    font-family: 'WorkSans-Medium';
+                    font-size: .8rem;
+                    margin-bottom: 0px;
+                }
+            }
+
+            .titulo {
+                padding: 10px;
+                border: 1px solid #5C605D;
+
+                h4 {
+                    color: #F5F1E6;
+                    font-family: 'WorkSans-Regular';
+                    margin-bottom: 0px;
+                }
+
+                h5 {
+                    color: #F5F1E6;
+                    font-family: 'WorkSans-Light';
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .cta {
+            border: 1px solid #5C605D;
+            display: flex;
+            padding: 0px;
+            position: relative;
+
+            h2 {
+                position: absolute;
+                bottom: 0;
+                margin-left: 20px;
+            }
+
+            .c-block {
+                display: contents;
+            }
+
+            .cuadro-1 {
+                flex-grow: 1;
+                height: 70px;
+                border-bottom: 1px solid #5C605D;
+            }
+
+            .cuadro-2 {
+                width: 70px;
+                height: 70px;
+                border: 1px solid #5C605D;
+                border-right: 0px;
+                border-top: 0px;
+                position: relative;
+                /* Necesario para posicionar la línea */
+                overflow: hidden;
+
+                /* Corta los sobrantes de la línea */
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background-color: #666;
+                    height: 1px;
+                    /* Grosor de la línea */
+
+                    /* Matemáticas: La diagonal de un cuadrado es lado * 1.4142 */
+                    width: 142%;
+
+                    /* Centrar y rotar */
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

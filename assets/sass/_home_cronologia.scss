@@ -1,0 +1,75 @@
+.home_cronologia {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: $COLOR_3;
+
+    .slider {
+        .item {
+            padding-left: 10px;
+
+            p {
+                font-family: 'WorkSans-Light';
+                color: #252625;
+                font-size: .9rem;
+            }
+
+            h4 {
+                font-family: 'WorkSans-Regular';
+                color: #252625;
+                margin-bottom: 0px;
+                font-size: 1rem;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .slick-nexto {
+        text-align: right;
+
+        i {
+            cursor: pointer;
+        }
+    }
+}
+
+.c-responsive_center .slick-list {
+    padding-left: 0 !important;
+    /* oculta el lado izquierdo */
+    padding-right: 120px !important;
+    /* mantiene el peek derecho */
+    overflow: hidden;
+    /* por si acaso */
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .home_cronologia {
+        padding-right: 0px;
+
+        .cont-slider {
+            padding-left: 60px;
+            margin-right: 0px;
+
+            .col-slider {
+                padding-right: 0px;
+            }
+
+            .slick-slide {
+                //width: 250px;
+            }
+        }
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

@@ -370,6 +370,42 @@ $(document).on('ready', function () {
         ]
     });
 
+    $('.center').slick({
+        centerMode: true,
+        arrows: false,
+        centerPadding: '60px',
+        slidesToShow: 4,
+        //variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 5
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    $('.slick-prevo').on('click', function () {
+        $('.center').slick('slickPrev');
+    });
+    $('.slick-nexto').on('click', function () {
+        $('.center').slick('slickNext');
+    });
+
+
     $('.responsive2').slick({
         dots: true,
         arrows: false,
@@ -437,7 +473,7 @@ $(".btn_promos").click(function () {
 
 
 function click_promos() {
-    
+
 }
 
 function click_formulario() {
@@ -495,7 +531,7 @@ function click_ventajas() {
 
 
 function click_section(v_section) {
-    $('html, body').scrollTop($("."+v_section).offset().top - 110);
+    $('html, body').scrollTop($("." + v_section).offset().top - 110);
     $("#btn-menu-xs-cerrar").click();
 }
 

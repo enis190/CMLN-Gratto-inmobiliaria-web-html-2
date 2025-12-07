@@ -2,7 +2,20 @@
 $COLOR_1: #252625;
 $COLOR_2: #C5E3CC;
 $COLOR_3: #F5F1E6;
-$COLOR_4: #643BA3;
+$COLOR_4: #E3DBCE;
+
+.color-1{
+  color: $COLOR_1;
+}
+.color-2{
+  color: $COLOR_2;
+}
+.color-3{
+  color: $COLOR_3;
+}
+.color-4{
+  color: $COLOR_4;
+}
 
 /*LOADER*/
 .jm-loadingpage {

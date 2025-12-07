@@ -144,22 +144,22 @@ $(document).ready(function () {
 
 
 // FIXED MENU
-$(document).ready(function () {
-    var menu = $(".c-menu");
-    var menuOffset = menu.offset().top;
+// $(document).ready(function () {
+//     var menu = $(".c-menu");
+//     var menuOffset = menu.offset().top;
 
-    $(window).scroll(function () {
-        var scrollPosition = $(window).scrollTop();
+//     $(window).scroll(function () {
+//         var scrollPosition = $(window).scrollTop();
 
-        if (scrollPosition >= menuOffset) {
-            // Si el scroll ha pasado la posición del menú, agregar la clase "fixed"
-            menu.addClass("c-fixed");
-        } else {
-            // Si el scroll está por encima de la posición del menú, quitar la clase "fixed"
-            menu.removeClass("c-fixed");
-        }
-    });
-});
+//         if (scrollPosition >= menuOffset) {
+//             // Si el scroll ha pasado la posición del menú, agregar la clase "fixed"
+//             menu.addClass("c-fixed");
+//         } else {
+//             // Si el scroll está por encima de la posición del menú, quitar la clase "fixed"
+//             menu.removeClass("c-fixed");
+//         }
+//     });
+// });
 
 
 

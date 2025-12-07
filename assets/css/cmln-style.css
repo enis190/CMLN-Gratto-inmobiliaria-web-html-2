@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*requeridas*/
 @font-face {
   font-family: "FontAwesome";
@@ -35,12 +36,12 @@
   src: url(../fonts/IBMPlexSans-BoldItalic.ttf);
 }
 @font-face {
-  font-family: "IBMPlexSans-Regular";
-  src: url(../fonts/IBMPlexSans-Regular.ttf);
+  font-family: "WorkSans-Light";
+  src: url(../fonts/WorkSans-Light.ttf);
 }
 @font-face {
-  font-family: "IBMPlexSans-Bold";
-  src: url(../fonts/IBMPlexSans-Bold.ttf);
+  font-family: "WorkSans-Medium";
+  src: url(../fonts/WorkSans-Medium.ttf);
 }
 @font-face {
   font-family: "revicons";
@@ -59,6 +60,22 @@
   src: url(../fonts/Roboto_Condensed-Light.ttf);
 }
 /*COLORES*/
+.color-1 {
+  color: #252625;
+}
+
+.color-2 {
+  color: #C5E3CC;
+}
+
+.color-3 {
+  color: #F5F1E6;
+}
+
+.color-4 {
+  color: #E3DBCE;
+}
+
 /*LOADER*/
 .jm-loadingpage {
   position: fixed;
@@ -522,10 +539,10 @@ p span {
 }
 @keyframes c_keyframe_xs {
   0% {
-    background-color: #643BA3;
+    background-color: #E3DBCE;
   }
   90% {
-    background-color: #643BA3;
+    background-color: #E3DBCE;
   }
   100% {
     background-color: #F5F1E6;
@@ -695,6 +712,10 @@ p {
 .titulo-1 {
   font-family: "ScopeOne-Regular";
   line-height: 60px;
+}
+
+.titulo-2 {
+  font-family: "ScopeOne-Regular";
 }
 
 .c-container {
@@ -960,6 +981,55 @@ p {
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+.c-footer {
+  background-color: #252625;
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+.c-footer p.small {
+  font-family: "WorkSans-Light";
+  font-size: 0.7rem;
+  color: #A5ADA7;
+}
+.c-footer .block-1 h2 {
+  color: #C5E3CC;
+}
+.c-footer .block-1 ul.redes {
+  display: flex;
+  list-style: none;
+  padding-left: 0px;
+  margin-top: 25px;
+}
+.c-footer .block-1 ul.redes li span {
+  background-color: #F5F1E6;
+  width: 18px;
+  border-radius: 50%;
+  height: 18px;
+  margin-right: 6px;
+}
+.c-footer .block-1 ul.redes li span .c-fa {
+  color: #252625;
+}
+.c-footer .block-1 p {
+  font-family: "WorkSans-Light";
+  color: #A5ADA7;
+}
+.c-footer .block-2 ul li a {
+  text-decoration: none;
+  font-family: "ScopeOne-Regular";
+  color: #F5F1E6;
+}
+.c-footer .block-2 ul.tyc li a {
+  text-decoration: none;
+  font-family: "WorkSans-Light";
+  color: #F5F1E6;
+}
+
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 .c-menu {
   background-color: #FFF;
   padding-top: 20px;
@@ -1050,6 +1120,212 @@ p {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
 /* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+.home_proyectos {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #252625;
+}
+.home_proyectos form .content-control {
+  position: relative;
+}
+.home_proyectos form .content-control label {
+  color: #B8C1B9;
+  font-family: "WorkSans-Regular";
+  position: absolute;
+}
+.home_proyectos form .content-control select {
+  margin-top: 30px;
+  background-color: #252625;
+  color: #939A94;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  /* Mover la flecha 1.5rem (aprox. 15px) a la izquierda */
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 0.8em;
+  /* Tamaño de la flecha (ajusta si es necesario) */
+  /* 4. Dar espacio al texto para que no se encime sobre la flecha */
+  padding-right: 2rem;
+  border-radius: 3px;
+}
+.home_proyectos form .btn-1 {
+  margin-top: 30px;
+}
+.home_proyectos .blocks-1 .proyecto .img {
+  height: 440px;
+  overflow: hidden;
+}
+.home_proyectos .blocks-1 .proyecto .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home_proyectos .blocks-1 .proyecto .det {
+  padding: 10px;
+  border: 1px solid #5C605D;
+}
+.home_proyectos .blocks-1 .proyecto .det p {
+  color: #F5F1E6;
+  font-family: "WorkSans-Medium";
+  font-size: 0.8rem;
+  margin-bottom: 0px;
+}
+.home_proyectos .blocks-1 .proyecto .titulo {
+  padding: 10px;
+  border: 1px solid #5C605D;
+}
+.home_proyectos .blocks-1 .proyecto .titulo h4 {
+  color: #F5F1E6;
+  font-family: "WorkSans-Regular";
+  margin-bottom: 0px;
+}
+.home_proyectos .blocks-1 .proyecto .titulo h5 {
+  color: #F5F1E6;
+  font-family: "WorkSans-Light";
+  font-size: 1.2rem;
+}
+.home_proyectos .blocks-1 .cta {
+  border: 1px solid #5C605D;
+  display: flex;
+  padding: 0px;
+  position: relative;
+}
+.home_proyectos .blocks-1 .cta h2 {
+  position: absolute;
+  bottom: 0;
+  margin-left: 20px;
+}
+.home_proyectos .blocks-1 .cta .c-block {
+  display: contents;
+}
+.home_proyectos .blocks-1 .cta .cuadro-1 {
+  flex-grow: 1;
+  height: 70px;
+  border-bottom: 1px solid #5C605D;
+}
+.home_proyectos .blocks-1 .cta .cuadro-2 {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #5C605D;
+  border-right: 0px;
+  border-top: 0px;
+  position: relative;
+  /* Necesario para posicionar la línea */
+  overflow: hidden;
+  /* Corta los sobrantes de la línea */
+}
+.home_proyectos .blocks-1 .cta .cuadro-2::before {
+  content: "";
+  position: absolute;
+  background-color: #666;
+  height: 1px;
+  /* Grosor de la línea */
+  /* Matemáticas: La diagonal de un cuadrado es lado * 1.4142 */
+  width: 142%;
+  /* Centrar y rotar */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+.home_cronologia {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #F5F1E6;
+}
+.home_cronologia .slider .item {
+  padding-left: 10px;
+}
+.home_cronologia .slider .item p {
+  font-family: "WorkSans-Light";
+  color: #252625;
+  font-size: 0.9rem;
+}
+.home_cronologia .slider .item h4 {
+  font-family: "WorkSans-Regular";
+  color: #252625;
+  margin-bottom: 0px;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+.home_cronologia .slick-nexto {
+  text-align: right;
+}
+.home_cronologia .slick-nexto i {
+  cursor: pointer;
+}
+
+.c-responsive_center .slick-list {
+  padding-left: 0 !important;
+  /* oculta el lado izquierdo */
+  padding-right: 120px !important;
+  /* mantiene el peek derecho */
+  overflow: hidden;
+  /* por si acaso */
+}
+
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .home_cronologia {
+    padding-right: 0px;
+  }
+  .home_cronologia .cont-slider {
+    padding-left: 60px;
+    margin-right: 0px;
+  }
+  .home_cronologia .cont-slider .col-slider {
+    padding-right: 0px;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+.home_estetica {
+  padding-bottom: 70px;
+  padding-top: 70px;
+  background-color: #E3DBCE;
+}
+.home_estetica .img {
+  height: 440px;
+  overflow: hidden;
+}
+.home_estetica .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home_estetica .txt {
+  display: flex;
+}
+.home_estetica .txt .d-block {
+  background-color: #F5F1E6;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+}
+.home_estetica .txt .d-block p {
+  font-family: "WorkSans-Light";
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 30px;
+  padding-right: 30px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .home_estetica .txt .d-block h2 {
+    width: 250px;
+  }
+}
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 
 /*# sourceMappingURL=cmln-style.css.map */
