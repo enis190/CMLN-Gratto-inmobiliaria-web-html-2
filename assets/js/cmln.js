@@ -206,6 +206,7 @@ $("#btn-menu-xs-cerrar").click(function () {
 });
 $("#btn-menu-xs-abrir").click(function () {
     $('#div_menu_xs').addClass('active');
+    //alert('eeeeeee');
 });
 
 
@@ -404,6 +405,169 @@ $(document).on('ready', function () {
     $('.slick-nexto').on('click', function () {
         $('.center').slick('slickNext');
     });
+
+
+
+    $('.center-5').slick({
+        centerMode: true,
+        arrows: false,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        autoplay: true,
+        //variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+
+    $('.center-6').slick({
+        centerMode: true,
+        arrows: false,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        autoplay: true,
+        //variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+
+    // $('.center-1').slick({
+    //     centerMode: true,
+    //     arrows: false,
+    //     centerPadding: '60px',
+    //     slidesToShow: 2,
+    //     //variableWidth: true,
+    //     responsive: [
+    //         {
+    //             breakpoint: 768,
+    //             settings: {
+    //                 arrows: false,
+    //                 centerMode: true,
+    //                 centerPadding: '40px',
+    //                 slidesToShow: 2
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 480,
+    //             settings: {
+    //                 arrows: false,
+    //                 centerMode: true,
+    //                 centerPadding: '40px',
+    //                 slidesToShow: 1
+    //             }
+    //         }
+    //     ]
+    // });
+
+
+    function initMobileSlickGroup() {
+        // Lista de sliders que solo deben funcionar en mobile
+        const mobileSliders = [
+            '.center-1',
+            '.center-2',
+            '.center-3'
+        ];
+
+        mobileSliders.forEach(selector => {
+            const $slider = $(selector);
+
+            if ($(window).width() < 768) {
+
+                // Inicializa solo si NO está iniciado
+                if (!$slider.hasClass('slick-initialized')) {
+                    $slider.slick({
+                        centerMode: true,
+                        arrows: false,
+                        centerPadding: '60px',
+                        slidesToShow: 2,
+                        autoplay: true,
+                        responsive: [
+                            {
+                                breakpoint: 768,
+                                settings: {
+                                    arrows: false,
+                                    centerMode: true,
+                                    centerPadding: '40px',
+                                    slidesToShow: 2
+                                }
+                            },
+                            {
+                                breakpoint: 480,
+                                settings: {
+                                    arrows: false,
+                                    centerMode: true,
+                                    centerPadding: '40px',
+                                    slidesToShow: 1
+                                }
+                            }
+                        ]
+                    });
+                }
+
+            } else {
+                // En desktop destruye estos sliders
+                if ($slider.hasClass('slick-initialized')) {
+                    $slider.slick('unslick');
+                }
+            }
+        });
+    }
+
+    // Ejecutar al cargar
+    initMobileSlickGroup();
+
+    // Ejecutar al redimensionar
+    $(window).on('resize', function () {
+        initMobileSlickGroup();
+    });
+
+
+
+
+
+
+
+
+
+
+
 
 
     $('.responsive2').slick({

@@ -1357,7 +1357,7 @@ jQuery($=> {
         responsiveLevels:[1240,1024,778,480],
         visibilityLevels:[1240,1024,778,480],
         gridwidth:[1240,1024,778,480],
-        gridheight:[650,600,600,1100],
+        gridheight:[650,600,600,780],
         lazyType:"none",
         // parallax: {
         //     type:"mouse",

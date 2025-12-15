@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gratto Inmobiliaria</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon-32x32.png">
+
+    <style>
+        .jm-loadingpage {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 999999999;
+            background-color: #004FEF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .jm-loadingpage table {
+            text-align: center;
+        }
+    </style>
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/revolution/navigation.min.css">
+    <link rel="stylesheet" href="assets/css/revolution/settings.min.css">
+    <link rel="stylesheet" href="assets/css/cmln-style.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/all.css">
+
+    <!-- <link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/revolution/navigation.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/revolution/settings.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/cmln-style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="styles.css">
+    </noscript> -->
+
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.min.css">
+
+
+</head>
+
+<body>
+
+
+    <div class="t_header"></div>
+
+    <!-- loader -->
+    <div class="jm-loadingpage ">
+        <table border="0">
+            <tr>
+                <td>
+                    <img class="img-fluid" src="assets/img/Logotype.png" loading="lazy">
+                </td>
+            </tr>
+            <tr>
+                <td><span class="loader"></span></td>
+            </tr>
+        </table>
+    </div>
+    <!-- end loader -->
+
+
+    <!-- Head -->
+    <div class="container-fluid header">
+        <div class="container">
+            <div class="row">
+                <div class="col-5 col-md-4 logo">
+                    <a href="/"><img src="assets/img/Logotype.png" alt="" class="img-fluid"></a>
+                </div>
+                <div class="col-7 col-md-6 offset-md-2 btns">
+                    <a href="proyectos_en_venta.html" class="btn-1 d-none d-md-inline">Proyectos en Venta</a>
+                    <a href="cotiza_aqui.html" class="btn-2">Cotiza Aquí <i class="fa-solid fa-inbox"></i></a>
+                    <a href="#" class="btn-2" id="btn-menu-xs-abrir"><i class="fa-sharp fa-solid fa-bars"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="div_menu_xs" class="container menu-xs d-flex" style="z-index: 9999999; ">
+        <div class="container d-block d-sm-flex">
+            <div class="row w-100">
+                <div class="col-12 position-relative">
+                    <div class="d-block block-1">
+                        <div>
+                            <div class="row ">
+                                <div class="col-12 item cerrar">
+                                    <span>
+                                        <i id="btn-menu-xs-cerrar" class="fa-solid fa-xmark fa-cmln"></i>
+                                    </span>
+                                </div>
+                                <ul class="items">
+                                    <li class="item active"><a href="proyectos_en_venta.html"
+                                            class="main_link active">Proyectos en Venta</a>
+                                    </li>
+
+                                    <li class="item "><a href="proyectos_entregados.html" class="main_link">Proyectos
+                                            Entregados</a></li>
+                                    <li class="item "><a href="quienes_somos.html" class="main_link">¿Quiénes Somos?</a>
+                                    </li>
+                                    <li class="item "><a href="cotiza_aqui.html" class="main_link">Cotiza Aquí</a></li>
+                                    <li class="item "><a href="plan_de_referidos.html" class="main_link">Plan de
+                                            Referidos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row block-footer">
+                            <div class="col-12 redes">
+                                <ul class="">
+                                    <li><a href="#" target="_blank"><span><i
+                                                    class="fa-brands fa-facebook-f c-fa"></i></span></a>
+                                    </li>
+                                    <li><a href="#" target="_blank"><span><i
+                                                    class="fa-brands fa-instagram c-fa"></i></span></a>
+                                    </li>
+                                </ul>
+                                <p class="phone">
+                                    <a href="#"><i class="fa-solid fa-phone-hangup"></i> 933 234 249</a>
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <div class="c-block">
+                                    <div class="cta">
+                                        <div class="cuadro-1">
+                                            <p>
+                                                <a href="#" target="_blank">Términos y Condiciones</a> | <a href="#"
+                                                    target="_blank">Políticas de Privacidad</a>
+                                            </p>
+                                        </div>
+                                        <div class="cuadro-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container-fluid background-2 cotiza_aqui c-container mt-5 ">
+        <div class="container block-1">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="titulo-2 color-1">Estás a punto de iniciar una nueva historia.</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid background-3 cotiza_aqui c-container ">
+        <div class="container block-2">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="titulo-2-min color-1">Cotiza tu próximo hogar</h2>
+                    <p>Déjanos tus datos y pronto un asesor se contactará contigo.</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6 plano">
+                    <label for="">Plano</label>
+                    <center>
+                        <img src="assets/img/plano.png" alt="" class="img-fluid">
+                    </center>
+                </div>
+                <div class="col-md-6 form">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6 content-control mb-3">
+                                        <label for="inputState">Nombre*</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="col-md-6 content-control mb-3">
+                                        <label for="inputState">Apellidos*</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 content-control mb-3">
+                                        <label for="inputState">Teléfono*</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="col-md-6 content-control mb-3">
+                                        <label for="inputState">Correo electrónico*</label>
+                                        <input type="email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 content-control mb-3">
+                                        <label for="inputState">Tipo de documento*</label>
+                                        <select id="inputState" class="form-control">
+                                            <option selected>Seleccionar</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 content-control mb-3">
+                                        <label for="inputState">Número de documento*</label>
+                                        <input type="email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 content-control mb-3">
+                                        <label for="inputState">Proyecto de interés*</label>
+                                        <select id="inputState" class="form-control">
+                                            <option selected>Seleccionar</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 content-control mb-3">
+                                        <label for="inputState">Cantidad de dormitorios*</label>
+                                        <select id="inputState" class="form-control">
+                                            <option selected>Seleccionar</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 content-control mb-3">
+                                        <label for="inputState">Mensaje</label>
+                                        <textarea class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 content-control mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                            <label class="form-check-label" for="checkDefault">
+                                                He leído y acepto los <a href="terminos_y_condiciones.html" target="_blank">Términos y Condiciones</a> de Gratto Inmobiliaria.
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 content-control mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                            <label class="form-check-label" for="checkDefault">
+                                                Autorizo a Gratto Inmobiliaria para que realice las actividades de prospección comercial y marketing descritas en la <a href="politica_de_privacidad.html" target="_blank">Política de Privacidad</a>.
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="mt-4 min">(*) Campos obligatorios</p>
+                                    </div>
+                                    <div class="col-md-12 content-control mb-3 text-center">
+                                        <button type="submit" class="btn-1 background-1 color-2">Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="container-fluid c-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 block-1">
+                    <h2 class="titulo-2 color-1">Elegir bien, eso es <br> buen gusto.</h2>
+                    <ul class="redes">
+                        <li><a href="#" target="_blank"><span><i class="fa-brands fa-facebook-f c-fa"></i></span></a>
+                        </li>
+                        <li><a href="#" target="_blank"><span><i class="fa-brands fa-instagram c-fa"></i></span></a>
+                        </li>
+                    </ul>
+                    <p>2025 – GRATTO INMOBILIARIA ® <br> Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 block-2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li><a href="proyectos_en_venta.html">Proyectos en Venta</a></li>
+                                <li><a href="proyectos_entregados.html">Proyectos Entregados</a></li>
+                                <li><a href="quienes_somos.html">¿Quiénes Somos?</a></li>
+                                <li><a href="cotiza_aqui.html">Cotiza Aquí</a></li>
+                                <li><a href="plan_de_referidos.html">Plan de Referidos</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="tyc">
+                                <li><a href="terminos_y_condiciones.html">Términos y Condiciones</a></li>
+                                <li><a href="politica_de_privacidad.html">Políticas de Privacidad</a></li>
+                                <li><a href="#"><i class="fa-solid fa-phone-hangup"></i> 933 234 249</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <center>
+                        <img src="assets/img/Logo-footer.png" alt="" class="img-fluid mt-5 mb-4">
+                    </center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="small">*Todas las imágenes, planos, medidas y áreas son referenciales por lo que podrían
+                        sufrir cambios al momento de desarrollarse el proyecto, asimismo los elementos decorativos,
+                        acabados y mobiliarios son propuestas del departamento de diseño que no se incluyen en la oferta
+                        comercial y no comprometen a la empresa inmobiliaria.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="javascript:click_section('t_header')" class="c-subir"><i class="fa fa-angle-up"></i></a>
+
+
+    <!-- <div class="c-wsp pulse" data-bs-toggle="modal" data-bs-target="#mdl_wsp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </div> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+
+    <!-- Slick-->
+    <!-- <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script> -->
+    <script src="assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <script src="assets/js/propper.min.js"></script>
+    <!-- <script src="assets/js/bootstrap.min.js"></script> -->
+    <!--to view items on reach-->
+    <script src="assets/js/jquery.appear.min.js"></script>
+    <!--Owl Slider-->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--number counters-->
+    <!-- <script src="assets/js/jquery-countTo.min.js"></script> -->
+    <!--Parallax Background-->
+    <script src="assets/js/parallaxie.min.js"></script>
+    <!--Cubefolio Gallery-->
+    <script src="assets/js/jquery.cubeportfolio.min.js"></script>
+    <!--Fancybox js-->
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <!--tooltip js-->
+    <script src="assets/js/tooltipster.min.js"></script>
+    <!--wow js-->
+    <!-- <script src="assets/js/wow.min.js"></script> -->
+
+    <!--Revolution SLider-->
+    <script src="assets/js/revolution/jquery.themepunch.tools.min.js"></script>
+    <script src="assets/js/revolution/jquery.themepunch.revolution.min.js"></script>
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS -->
+    <script src="assets/js/revolution/extensions/revolution.extension.actions.min.js"></script>
+    <script src="assets/js/revolution/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="assets/js/revolution/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="assets/js/revolution/extensions/revolution.extension.layeranimation.min.js"></script>
+    <!-- <script src="js/revolution/extensions/revolution.extension.migration.min.js"></script> -->
+    <script src="assets/js/revolution/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="assets/js/revolution/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="assets/js/revolution/extensions/revolution.extension.slideanims.min.js"></script>
+    <!-- <script src="js/revolution/extensions/revolution.extension.video.min.js"></script> -->
+    <!--custom functions and script-->
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/cmln.js"></script>
+    <script src="assets/js/cmln_2.js"></script>
+
+    <script>
+        // Esperar a que se cargue completamente la página (incluyendo CSS)
+        window.addEventListener('load', function () {
+            // Obtener el elemento con id div_menu_xs
+            var menu = document.getElementById('div_menu_xs');
+            // Retirar la clase d-none
+            if (menu) {
+                menu.classList.remove('d-none');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

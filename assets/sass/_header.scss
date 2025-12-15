@@ -2,18 +2,19 @@
     background-color: $COLOR_1;
     padding-top: 20px;
     padding-bottom: 20px;
-    .logo{
-        img{
+
+    .logo {
+        img {
             max-height: 37px;
         }
     }
 }
 
 .menu-xs {
-    background-color: #fff;
+    background-color: $COLOR_2;
     border-top-left-radius: 14px;
     width: 100%;
-    max-width: 345px;
+    max-width: 395px;
     position: fixed;
     top: 0;
     right: -100%;
@@ -24,38 +25,194 @@
     padding: 30px;
 
     &.active {
-        right: 0;
+        right: -30px;
         -webkit-box-shadow: -2px 4px 21px -1px rgba(0, 0, 0, 0.67);
         -moz-box-shadow: -2px 4px 21px -1px rgba(0, 0, 0, 0.67);
         box-shadow: -2px 4px 21px -1px rgba(0, 0, 0, 0.67);
     }
 
+    .block-1 {
+        border: 1px solid #4F4F4F;
+        border-radius: 3px;
+        height: 100%;
+
+        ul {
+            margin-left: 15px;
+            margin-top: 25px;
+
+            li {
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    color: #252625;
+                    font-family: 'ScopeOne-Regular';
+                }
+            }
+        }
+    }
+
+    .block-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        .c-block {
+            .cta {
+                //border: 1px solid #5C605D;
+                display: flex;
+                padding: 0px;
+                position: relative;
+
+                .cuadro-1 {
+                    flex-grow: 1;
+                    height: 40px;
+                    border-top: 1px solid #5C605D;
+                    padding: 7px;
+
+                    a {
+                        text-decoration: none;
+                        color: #252625;
+                        font-family: 'WorkSans-Light';
+                        font-size: .6rem;
+                    }
+                }
+
+                .cuadro-2 {
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid #5C605D;
+                    border-right: 0px;
+                    //border-top: 0px;
+                    border-bottom: 0px;
+                    position: relative;
+                    /* Necesario para posicionar la línea */
+                    overflow: hidden;
+
+                    /* Corta los sobrantes de la línea */
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        background-color: #666;
+                        height: 1px;
+                        /* Grosor de la línea */
+
+                        /* Matemáticas: La diagonal de un cuadrado es lado * 1.4142 */
+                        width: 142%;
+
+                        /* Centrar y rotar */
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                    }
+                }
+            }
+        }
+
+        .redes {
+            ul {
+                display: flex;
+                list-style: none;
+                padding-left: 0px;
+                margin-top: 25px;
+                margin-bottom: 5px;
+
+                li {
+                    span {
+                        background-color: $COLOR_1;
+                        width: 22px;
+                        border-radius: 50%;
+                        height: 22px;
+                        margin-right: 6px;
+                        display: inline-flex;
+                        display: flex;
+                        justify-content: center;
+                        /* horizontal */
+                        align-items: center;
+                        /* vertical */
+
+                        .c-fa {
+                            color: $COLOR_2;
+                        }
+                    }
+                }
+            }
+        }
+
+        p {
+            &.phone {
+                a {
+                    margin-left: 17px;
+                    text-decoration: none;
+                    color: #252625;
+                    font-family: 'WorkSans-Light';
+                }
+            }
+
+        }
+    }
+
     .cerrar {
         text-align: right;
+        position: relative;
 
-        .fa-cmln {
-            font-size: 1.5rem;
+        span {
+            cursor: pointer;
+            background-color: #252625;
+            border-radius: 3px;
+            position: absolute;
+            right: 11px;
+
+            .fa-cmln {
+                font-size: 1rem;
+                color: $COLOR_2
+            }
         }
     }
 
     .item {
-        padding-top: 15px;
-        padding-bottom: 15px;
-        border-bottom: solid 2px #eaebf4;
+        // padding-top: 15px;
+        // padding-bottom: 15px;
+        // border-bottom: solid 2px #eaebf4;
 
-        a {
-            margin: 0px;
-            text-decoration: none;
-            color: $COLOR_1;
-            text-transform: uppercase;
-        }
+        // a {
+        //     margin: 0px;
+        //     text-decoration: none;
+        //     color: $COLOR_1;
+        //     text-transform: uppercase;
+        // }
     }
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .header {
+        .btns {
+            text-align: right;
+        }
+
+    }
+
+    .menu-xs {
+        .block-1 {
+            ul {
+                //height: 300px;
+                &.items{
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        z-index: 99;
         
+
+        .btns {
+            text-align: right;
+        }
     }
 
 
@@ -70,7 +227,11 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .header {
-        .btns{
+        position: fixed;
+        top: 0;
+        z-index: 99;
+
+        .btns {
             text-align: right;
         }
     }

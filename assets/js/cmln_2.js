@@ -90,7 +90,7 @@ $(document).ready(function () {
         $('[id^="contenido_"]').each(function () {
             // Verificar si el elemento está definido
             if ($(this).length) {
-                var contentOffset = $(this).offset().top-150;
+                var contentOffset = $(this).offset().top - 150;
                 var contentHeight = $(this).outerHeight();
 
                 if (scrollPosition >= contentOffset && scrollPosition < contentOffset + contentHeight) {
@@ -109,14 +109,14 @@ $(document).ready(function () {
 
         /**Cambiar color btn fixed */
         $('.c-menu').each(function () {
-            var contentOffset = $(this).offset().top-400;
+            var contentOffset = $(this).offset().top - 400;
             var contentHeight = $(this).outerHeight();
 
-            if(scrollPosition >= contentOffset){
+            if (scrollPosition >= contentOffset) {
                 $('.btn-fixed-call').addClass('active');
                 $('.c-subir').addClass('active');
                 $('.c-msj').addClass('active');
-            }else{
+            } else {
                 $('.btn-fixed-call').removeClass('active');
                 $('.c-subir').removeClass('active');
                 $('.c-msj').removeClass('active');
@@ -127,7 +127,7 @@ $(document).ready(function () {
     }
 
 
-    function subir(){
+    function subir() {
         $('html, body').scrollTop($("#header_page").offset().top);
     }
 
@@ -180,7 +180,7 @@ $(document).ready(function () {
                     var windowHeight = $(window).height();
                     var delay = parseInt($(this).data('delay')) || 0;
                     var duration = parseInt($(this).data('duration')) || 1000; // Duración predeterminada: 1000 ms
-        
+
                     if (scroll > position - windowHeight + 100) {
                         setTimeout(function () {
                             $(this).css({ transition: 'opacity ' + duration + 'ms ease-in-out, transform ' + duration + 'ms ease-in-out' }).addClass("active");
@@ -194,7 +194,7 @@ $(document).ready(function () {
                     var windowHeight = $(window).height();
                     var delay = parseInt($(this).data('delay')) || 0;
                     var duration = parseInt($(this).data('duration')) || 1000; // Duración predeterminada: 1000 ms
-        
+
                     if (scroll > position - windowHeight + 100) {
                         setTimeout(function () {
                             $(this).css({ transition: 'opacity ' + duration + 'ms ease-in-out, transform ' + duration + 'ms ease-in-out' }).addClass("active");
@@ -209,7 +209,7 @@ $(document).ready(function () {
                     var windowHeight = $(window).height();
                     var delay = parseInt($(this).data('delay')) || 0;
                     var duration = parseInt($(this).data('duration')) || 1000; // Duración predeterminada: 1000 ms
-        
+
                     if (scroll > position - windowHeight + 100) {
                         setTimeout(function () {
                             $(this).css({ transition: 'opacity ' + duration + 'ms ease-in-out, transform ' + duration + 'ms ease-in-out' }).addClass("active");
@@ -223,7 +223,7 @@ $(document).ready(function () {
                     var windowHeight = $(window).height();
                     var delay = parseInt($(this).data('delay')) || 0;
                     var duration = parseInt($(this).data('duration')) || 1000; // Duración predeterminada: 1000 ms
-        
+
                     if (scroll > position - windowHeight + 100) {
                         setTimeout(function () {
                             $(this).css({ transition: 'opacity ' + duration + 'ms ease-in-out, transform ' + duration + 'ms ease-in-out' }).addClass("active");
@@ -237,7 +237,7 @@ $(document).ready(function () {
                     var windowHeight = $(window).height();
                     var delay = parseInt($(this).data('delay')) || 0;
                     var duration = parseInt($(this).data('duration')) || 1000; // Duración predeterminada: 1000 ms
-        
+
                     if (scroll > position - windowHeight + 100) {
                         setTimeout(function () {
                             $(this).css({ transition: 'opacity ' + duration + 'ms ease-in-out, transform ' + duration + 'ms ease-in-out' }).addClass("active");
@@ -247,12 +247,12 @@ $(document).ready(function () {
 
 
                 $(".cont-niv-html").each(function () {
-                    var position = $(this).offset().top-200;
+                    var position = $(this).offset().top - 200;
                     var scroll = $(window).scrollTop();
                     var windowHeight = $(window).height();
                     var delay = parseInt($(this).data('delay')) || 0;
                     var duration = parseInt($(this).data('duration')) || 1000; // Duración predeterminada: 1000 ms
-        
+
                     if (scroll > position - windowHeight + 10) {
                         setTimeout(function () {
                             $(this).css({ transition: 'opacity ' + duration + 'ms ease-in-out, transform ' + duration + 'ms ease-in-out' }).addClass("active");
@@ -262,15 +262,15 @@ $(document).ready(function () {
 
 
             }
-        
+
             // Llamar a la función al cargar la página y al desplazarse
             applyEffectsOnScroll();
-        
+
             $(window).scroll(function () {
                 applyEffectsOnScroll();
             });
         });
-        
+
     }
 
     // Llamar a la función al cargar la página y al desplazarse
@@ -290,3 +290,29 @@ $(document).ready(function () {
     });
 });
 
+
+
+// TAP PANEL PROYECTOS
+$('#btn_proyecto_interiores').on('click', function () {
+    var tab = new bootstrap.Tab(
+        document.querySelector('#list-home-list')
+    );
+    tab.show();
+    $(this).removeClass('btn-4').addClass('btn-3');
+    $('#btn_proyecto_areas').removeClass('btn-3').addClass('btn-4');
+});
+
+$('#btn_proyecto_areas').on('click', function () {
+    var tab = new bootstrap.Tab(
+        document.querySelector('#list-profile-list')
+    );
+    tab.show();
+    $(this).removeClass('btn-4').addClass('btn-3');
+    $('#btn_proyecto_interiores').removeClass('btn-3').addClass('btn-4');
+});
+
+// Para que no exista delay cuando de slick en tapánel
+$('#list-tab a').on('shown.bs.tab', function (e) {
+    var target = $(e.target).attr('href'); // #list-home o #list-profile
+    $(target).find('.slider').slick('setPosition');
+});

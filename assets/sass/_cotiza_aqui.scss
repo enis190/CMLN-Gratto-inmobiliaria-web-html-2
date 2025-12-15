@@ -1,0 +1,94 @@
+.cotiza_aqui {
+    padding-bottom: 40px;
+
+    .block-2 {
+        .plano {
+            label {
+                color: #939A94;
+                font-family: 'WorkSans-Medium';
+                font-size: .9rem;
+            }
+        }
+
+        .form {
+            form {
+                .content-control {
+                    position: relative;
+
+                    label {
+                        color: #939A94;
+                        font-family: "WorkSans-Medium";
+                        font-size: 0.9rem;
+                        position: absolute;
+                    }
+
+                    select,
+                    input[type="text"],
+                    textarea,
+                    input[type="email"] {
+                        margin-top: 30px;
+                        background-color: $COLOR_3;
+                        color: #939A94;
+                        border: 1px solid #939A94;
+
+                        /* Mover la flecha 1.5rem (aprox. 15px) a la izquierda */
+                        background-position: right .5rem center;
+                        background-repeat: no-repeat;
+                        background-size: 0.8em;
+                        /* Tamaño de la flecha (ajusta si es necesario) */
+
+                        /* 4. Dar espacio al texto para que no se encime sobre la flecha */
+                        padding-right: 2rem;
+
+                        border-radius: 3px;
+                    }
+
+                    select {
+                        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23939A94' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+                    }
+                    a{
+                        text-decoration: none;
+                        color: #939A94;
+                        text-decoration: underline;
+                    }
+
+                    .form-control:focus,
+                    .form-select:focus {
+                        border-color: $COLOR_1;
+                        /* o el color que quieras */
+                        box-shadow: none;
+                        outline: none;
+                    }
+                }
+
+                .btn-1 {
+                    margin-top: 30px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .cotiza_aqui {
+        .block-1 {
+            padding-top: 70px;
+        }
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

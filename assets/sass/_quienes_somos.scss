@@ -1,0 +1,93 @@
+.quienes_somos {
+    .f-container {
+        //border: 1px solid #5C605D;
+    }
+
+    .c-text {
+        border: 1px solid #5C605D;
+        border-right: 0px;
+        padding: 25px;
+    }
+
+    .c-diagonal {
+        position: relative;
+        /* Necesario para posicionar la línea */
+        overflow: hidden;
+        padding: 0px;
+        border: 1px solid #5C605D;
+
+
+        .c-block {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border-bottom: 1px solid #5C605D;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: #666;
+                height: 1px;
+                /* Grosor de la línea */
+
+                /* Matemáticas: La diagonal de un cuadrado es lado * 1.4142 */
+                width: 142%;
+
+                /* Centrar y rotar */
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+    }
+
+    .block-2 {
+        .item {
+            .c-txt {
+                position: relative;
+
+                p {
+                    position: absolute;
+                    bottom: 0px;
+                }
+            }
+        }
+
+    }
+
+    .block-3 {
+        .c-block {
+            padding: 25px;
+        }
+    }
+}
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .quienes_somos {
+        .c-text {
+            padding-top: 150px;
+        }
+
+        .block-3 {
+            .c-block {
+                padding-top: 200px;
+            }
+        }
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

@@ -6,6 +6,21 @@
     .slider {
         .item {
             padding-left: 10px;
+            margin-top: 30px;
+            border-top: 1px solid #A5ADA7;
+            padding-top: 15px;
+            position: relative;
+            
+            &::after{
+                content: '';
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background-color: #A5ADA7;
+                top: 0px;
+                margin-top: -3px;
+            }
 
             p {
                 font-family: 'WorkSans-Light';

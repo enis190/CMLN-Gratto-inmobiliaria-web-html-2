@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gratto Inmobiliaria</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon-32x32.png">
+
+    <style>
+        .jm-loadingpage {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 999999999;
+            background-color: #004FEF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .jm-loadingpage table {
+            text-align: center;
+        }
+    </style>
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/revolution/navigation.min.css">
+    <link rel="stylesheet" href="assets/css/revolution/settings.min.css">
+    <link rel="stylesheet" href="assets/css/cmln-style.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/all.css">
+
+    <!-- <link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/revolution/navigation.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/revolution/settings.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/cmln-style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="styles.css">
+    </noscript> -->
+
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.min.css">
+
+
+</head>
+
+<body>
+
+
+    <div class="t_header"></div>
+
+    <!-- loader -->
+    <div class="jm-loadingpage ">
+        <table border="0">
+            <tr>
+                <td>
+                    <img class="img-fluid" src="assets/img/Logotype.png" loading="lazy">
+                </td>
+            </tr>
+            <tr>
+                <td><span class="loader"></span></td>
+            </tr>
+        </table>
+    </div>
+    <!-- end loader -->
+
+    <!-- Head -->
+    <div class="container-fluid header">
+        <div class="container">
+            <div class="row">
+                <div class="col-5 col-md-4 logo">
+                    <a href="/"><img src="assets/img/Logotype.png" alt="" class="img-fluid"></a>
+                </div>
+                <div class="col-7 col-md-6 offset-md-2 btns">
+                    <a href="proyectos_en_venta.html" class="btn-1 d-none d-md-inline">Proyectos en Venta</a>
+                    <a href="cotiza_aqui.html" class="btn-2">Cotiza Aquí <i class="fa-solid fa-inbox"></i></a>
+                    <a href="#" class="btn-2" id="btn-menu-xs-abrir"><i class="fa-sharp fa-solid fa-bars"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="div_menu_xs" class="container menu-xs d-flex" style="z-index: 9999999; ">
+        <div class="container d-block d-sm-flex">
+            <div class="row w-100">
+                <div class="col-12 position-relative">
+                    <div class="d-block block-1">
+                        <div>
+                            <div class="row ">
+                                <div class="col-12 item cerrar">
+                                    <span>
+                                        <i id="btn-menu-xs-cerrar" class="fa-solid fa-xmark fa-cmln"></i>
+                                    </span>
+                                </div>
+                                <ul class="items">
+                                    <li class="item active"><a href="proyectos_en_venta.html"
+                                            class="main_link active">Proyectos en Venta</a>
+                                    </li>
+
+                                    <li class="item "><a href="proyectos_entregados.html" class="main_link">Proyectos
+                                            Entregados</a></li>
+                                    <li class="item "><a href="quienes_somos.html" class="main_link">¿Quiénes Somos?</a>
+                                    </li>
+                                    <li class="item "><a href="cotiza_aqui.html" class="main_link">Cotiza Aquí</a></li>
+                                    <li class="item "><a href="plan_de_referidos.html" class="main_link">Plan de
+                                            Referidos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row block-footer">
+                            <div class="col-12 redes">
+                                <ul class="">
+                                    <li><a href="#" target="_blank"><span><i
+                                                    class="fa-brands fa-facebook-f c-fa"></i></span></a>
+                                    </li>
+                                    <li><a href="#" target="_blank"><span><i
+                                                    class="fa-brands fa-instagram c-fa"></i></span></a>
+                                    </li>
+                                </ul>
+                                <p class="phone">
+                                    <a href="#"><i class="fa-solid fa-phone-hangup"></i> 933 234 249</a>
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <div class="c-block">
+                                    <div class="cta">
+                                        <div class="cuadro-1">
+                                            <p>
+                                                <a href="#" target="_blank">Términos y Condiciones</a> | <a href="#"
+                                                    target="_blank">Políticas de Privacidad</a>
+                                            </p>
+                                        </div>
+                                        <div class="cuadro-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid container-mobile-fluid entregados mt-5">
+        <div class="container container-mobile-fluid">
+            <div class="row">
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-9">
+                    <h2 class="titulo-2 color-1">Proyectos Entregados</h2>
+                </div>
+            </div>
+
+            <div class="row item mt-3">
+                <div class="col-md-3 txt order-2 order-md-1">
+                    <div class="d-block c-block">
+                        <h4>GALEON - 157</h4>
+                        <div class="det">
+                            <div class="row">
+                                <div class="col-6 col-md-12">
+                                    <p>Ubicación</p>
+                                    <h5 class="mb-3">Chacarilla, San Borja</h5>
+                                    <p>Tipo de edificio</p>
+                                    <h5 class="mb-3">Edificio Multifamiliar</h5>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <p>Departamentos</p>
+                                    <h5 class="mb-3">11 departamentos</h5>
+                                    <p>Área construida</p>
+                                    <h5 class="mb-3">2,263.25 m²</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 order-1 order-md-2">
+                    <section class="slider center-1 c-responsive_center">
+                        <div class="s-item s-item-1">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-1.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="s-item s-item-2">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-2.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="row item mt-5">
+                <div class="col-md-3 txt order-2 order-md-1">
+                    <div class="d-block c-block">
+                        <h4>INDEPENDENCIA - 431</h4>
+                        <div class="det">
+                            <div class="row">
+                                <div class="col-6 col-md-12">
+                                    <p>Ubicación</p>
+                                    <h5 class="mb-3">Miraflores</h5>
+                                    <p>Tipo de edificio</p>
+                                    <h5 class="mb-3">Edificio Multifamiliar</h5>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <p>Departamentos</p>
+                                    <h5 class="mb-3">28 departamentos</h5>
+                                    <p>Área construida</p>
+                                    <h5 class="mb-3">6,151.67 m²</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 order-1 order-md-2">
+                    <section class="slider center-1 c-responsive_center">
+                        <div class="s-item s-item-2">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-3.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="s-item s-item-1">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-4.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row item mt-5">
+                <div class="col-md-3 txt order-2 order-md-1">
+                    <div class="d-block c-block">
+                        <h4>PACARITAMBO - 260</h4>
+                        <div class="det">
+                            <div class="row">
+                                <div class="col-6 col-md-12">
+                                    <p>Ubicación</p>
+                                    <h5 class="mb-3">Chacarilla, San Borja</h5>
+                                    <p>Tipo de edificio</p>
+                                    <h5 class="mb-3">Edificio Multifamiliar</h5>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <p>Departamentos</p>
+                                    <h5 class="mb-3">12 departamentos</h5>
+                                    <p>Área construida</p>
+                                    <h5 class="mb-3">2,686.05 m²</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 order-1 order-md-2">
+                    <section class="slider center-1 c-responsive_center">
+                        <div class="s-item s-item-1">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-5.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="s-item s-item-2">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-6.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row item mt-5">
+                <div class="col-md-3 txt order-2 order-md-1">
+                    <div class="d-block c-block">
+                        <h4>BELLO HORIZONTE - 171</h4>
+                        <div class="det">
+                            <div class="row">
+                                <div class="col-6 col-md-12">
+                                    <p>Ubicación</p>
+                                    <h5 class="mb-3">Chacarilla, San Borja</h5>
+                                    <p>Tipo de edificio</p>
+                                    <h5 class="mb-3">Edificio Multifamiliar</h5>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <p>Departamentos</p>
+                                    <h5 class="mb-3">12 departamentos</h5>
+                                    <p>Área construida</p>
+                                    <h5 class="mb-3">2,774 m²</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 order-1 order-md-2">
+                    <section class="slider center-1 c-responsive_center">
+                        <div class="s-item s-item-2">
+                            <div class="c-item">
+                                <!-- <img src="assets/img/fachada-5.png" alt="" class="img-fluid"> -->
+                            </div>
+                        </div>
+                        <div class="s-item s-item-1">
+                            <div class="c-item">
+                                <!-- <img src="assets/img/fachada-6.png" alt="" class="img-fluid"> -->
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="row item mt-5">
+                <div class="col-md-3 txt order-2 order-md-1">
+                    <div class="d-block c-block">
+                        <h4>TRINIDAD - 480</h4>
+                        <div class="det">
+                            <div class="row">
+                                <div class="col-6 col-md-12">
+                                    <p>Ubicación</p>
+                                    <h5 class="mb-3">Chacarilla, San Borja</h5>
+                                    <p>Tipo de edificio</p>
+                                    <h5 class="mb-3">Edificio Multifamiliar</h5>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <p>Departamentos</p>
+                                    <h5 class="mb-3">23 departamentos</h5>
+                                    <p>Área construida</p>
+                                    <h5 class="mb-3">5,250.81 m²</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 order-1 order-md-2">
+                    <section class="slider center-1 c-responsive_center">
+                        <div class="s-item s-item-1">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-7.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="s-item s-item-2">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-8.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="row item mt-5">
+                <div class="col-md-3 txt order-2 order-md-1">
+                    <div class="d-block c-block">
+                        <h4>MONTE CARMELO - 177</h4>
+                        <div class="det">
+                            <div class="row">
+                                <div class="col-6 col-md-12">
+                                    <p>Ubicación</p>
+                                    <h5 class="mb-3">Chacarilla, Santiago de Surco</h5>
+                                    <p>Tipo de edificio</p>
+                                    <h5 class="mb-3">Edificio Multifamiliar</h5>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <p>Departamentos</p>
+                                    <h5 class="mb-3">17 departamentos</h5>
+                                    <p>Área construida</p>
+                                    <h5 class="mb-3">5,383.17 m²</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 order-1 order-md-2">
+                    <section class="slider center-1 c-responsive_center">
+                        <div class="s-item s-item-2">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-9.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="s-item s-item-1">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-10.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="row item mt-5">
+                <div class="col-md-12 txt">
+                    <div class="d-block c-block c-block-2">
+                        <div class="row">
+                            <div class="col-md-4 offset-md-3 pb-5">
+                                <h2 class="titulo-2 color-1 mt-5  pd-3 pb-3">¿Te interesa conocer nuestros proyectos más recientes?</h2>
+                                <a href="proyectos_entregados.html" class="btn-1 background-1 color-2 mb-5">Proyectos en Venta</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row item mt-5">
+                <div class="col-md-3 txt order-2 order-md-1">
+                    <div class="d-block c-block">
+                        <h4>MONTE UMBROSO - 680</h4>
+                        <div class="det">
+                            <div class="row">
+                                <div class="col-6 col-md-12">
+                                    <p>Ubicación</p>
+                                    <h5 class="mb-3">Valle Hermoso de Monterrico, Santiago de Surco</h5>
+                                    <p>Tipo de edificio</p>
+                                    <h5 class="mb-3">Edificio Multifamiliar</h5>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <p>Departamentos</p>
+                                    <h5 class="mb-3">23 departamentos</h5>
+                                    <p>Área construida</p>
+                                    <h5 class="mb-3">5,228.62 m²</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 order-1 order-md-2">
+                    <section class="slider center-1 c-responsive_center">
+                        <div class="s-item s-item-2">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-11.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="s-item s-item-1">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-12.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="row item mt-5">
+                <div class="col-md-3 txt order-2 order-md-1">
+                    <div class="d-block c-block">
+                        <h4>LA NIÑA - 238</h4>
+                        <div class="det">
+                            <div class="row">
+                                <div class="col-6 col-md-12">
+                                    <p>Ubicación</p>
+                                    <h5 class="mb-3">Chacarilla, Santiago de Surco</h5>
+                                    <p>Tipo de edificio</p>
+                                    <h5 class="mb-3">Edificio Multifamiliar</h5>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <p>Departamentos</p>
+                                    <h5 class="mb-3">19 departamentos</h5>
+                                    <p>Área construida</p>
+                                    <h5 class="mb-3">5,018.22 m²</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 order-1 order-md-2">
+                    <section class="slider center-1 c-responsive_center">
+                        <div class="s-item s-item-1">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-13.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="s-item s-item-2">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-14.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="row item mt-5">
+                <div class="col-md-3 txt order-2 order-md-1">
+                    <div class="d-block c-block">
+                        <h4>CAVALIER - 157</h4>
+                        <div class="det">
+                            <div class="row">
+                                <div class="col-6 col-md-12">
+                                    <p>Ubicación</p>
+                                    <h5 class="mb-3">Chacarilla, San Borja</h5>
+                                    <p>Tipo de edificio</p>
+                                    <h5 class="mb-3">Edificio Multifamiliar</h5>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <p>Departamentos</p>
+                                    <h5 class="mb-3">23 departamentos</h5>
+                                    <p>Área construida</p>
+                                    <h5 class="mb-3">4,063.39 m²</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 order-1 order-md-2">
+                    <section class="slider center-1 c-responsive_center">
+                        <div class="s-item s-item-2">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-15.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="s-item s-item-1">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-16.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="row item mt-5">
+                <div class="col-md-3 txt order-2 order-md-1">
+                    <div class="d-block c-block">
+                        <h4>MONTE UMBROSO - 520</h4>
+                        <div class="det">
+                            <div class="row">
+                                <div class="col-6 col-md-12">
+                                    <p>Ubicación</p>
+                                    <h5 class="mb-3">Valle Hermoso de Monterrico, Santiago de Surco</h5>
+                                    <p>Tipo de edificio</p>
+                                    <h5 class="mb-3">Edificio Multifamiliar</h5>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <p>Departamentos</p>
+                                    <h5 class="mb-3">28 departamentos</h5>
+                                    <p>Área construida</p>
+                                    <h5 class="mb-3">5,177.88 m²</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 order-1 order-md-2">
+                    <section class="slider center-1 c-responsive_center">
+                        <div class="s-item s-item-1">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-17.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="s-item s-item-2">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-18.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="row item mt-5">
+                <div class="col-md-3 txt order-2 order-md-1">
+                    <div class="d-block c-block">
+                        <h4>JORGE CHAVEZ - 302</h4>
+                        <div class="det">
+                            <div class="row">
+                                <div class="col-6 col-md-12">
+                                    <p>Ubicación</p>
+                                    <h5 class="mb-3">Miraflores</h5>
+                                    <p>Tipo de edificio</p>
+                                    <h5 class="mb-3">Edificio Multifamiliar</h5>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <p>Departamentos</p>
+                                    <h5 class="mb-3">94 departamentos</h5>
+                                    <p>Área construida</p>
+                                    <h5 class="mb-3">13,976.29 m²</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 order-1 order-md-2">
+                    <section class="slider center-1 c-responsive_center">
+                        <div class="s-item s-item-2">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-19.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="s-item s-item-1">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-20.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="row item mt-5">
+                <div class="col-md-3 txt order-2 order-md-1">
+                    <div class="d-block c-block">
+                        <h4>CONDE DE LA VEGA - 152</h4>
+                        <div class="det">
+                            <div class="row">
+                                <div class="col-6 col-md-12">
+                                    <p>Ubicación</p>
+                                    <h5 class="mb-3">Chacarilla, Santiago de Surco</h5>
+                                    <p>Tipo de edificio</p>
+                                    <h5 class="mb-3">Edificio Multifamiliar</h5>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <p>Departamentos</p>
+                                    <h5 class="mb-3">23 departamentos</h5>
+                                    <p>Área construida</p>
+                                    <h5 class="mb-3">3,874.31 m²</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 order-1 order-md-2">
+                    <section class="slider center-1 c-responsive_center">
+                        <div class="s-item s-item-1">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-21.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="s-item s-item-2">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-22.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+
+            <div class="row item mt-5">
+                <div class="col-md-3 txt order-2 order-md-1">
+                    <div class="d-block c-block">
+                        <h4>COLEGIO ALTAIR</h4>
+                        <div class="det">
+                            <div class="row">
+                                <div class="col-6 col-md-12">
+                                    <p>Ubicación</p>
+                                    <h5 class="mb-3">La Molina</h5>
+                                    <p>Tipo de edificio</p>
+                                    <h5 class="mb-3">Ampliación del Colegio</h5>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <p>Departamentos</p>
+                                    <h5 class="mb-3">23 departamentos</h5>
+                                    <p>Área construida</p>
+                                    <h5 class="mb-3">7,440 m²</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 order-1 order-md-2">
+                    <section class="slider center-1 c-responsive_center">
+                        <div class="s-item s-item-2">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-23.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="s-item s-item-1">
+                            <div class="c-item">
+                                <img src="assets/img/fachada-24.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container-fluid c-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 block-1">
+                    <h2 class="titulo-2 color-1">Elegir bien, eso es <br> buen gusto.</h2>
+                    <ul class="redes">
+                        <li><a href="#" target="_blank"><span><i class="fa-brands fa-facebook-f c-fa"></i></span></a>
+                        </li>
+                        <li><a href="#" target="_blank"><span><i class="fa-brands fa-instagram c-fa"></i></span></a>
+                        </li>
+                    </ul>
+                    <p>2025 – GRATTO INMOBILIARIA ® <br> Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 block-2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li><a href="proyectos_en_venta.html">Proyectos en Venta</a></li>
+                                <li><a href="proyectos_entregados.html">Proyectos Entregados</a></li>
+                                <li><a href="quienes_somos.html">¿Quiénes Somos?</a></li>
+                                <li><a href="cotiza_aqui.html">Cotiza Aquí</a></li>
+                                <li><a href="plan_de_referidos.html">Plan de Referidos</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="tyc">
+                                <li><a href="terminos_y_condiciones.html">Términos y Condiciones</a></li>
+                                <li><a href="politica_de_privacidad.html">Políticas de Privacidad</a></li>
+                                <li><a href="#"><i class="fa-solid fa-phone-hangup"></i> 933 234 249</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <center>
+                        <img src="assets/img/Logo-footer.png" alt="" class="img-fluid mt-5 mb-4">
+                    </center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="small">*Todas las imágenes, planos, medidas y áreas son referenciales por lo que podrían
+                        sufrir cambios al momento de desarrollarse el proyecto, asimismo los elementos decorativos,
+                        acabados y mobiliarios son propuestas del departamento de diseño que no se incluyen en la oferta
+                        comercial y no comprometen a la empresa inmobiliaria.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <a href="javascript:click_section('t_header')" class="c-subir"><i class="fa fa-angle-up"></i></a>
+
+
+    <!-- <div class="c-wsp pulse" data-bs-toggle="modal" data-bs-target="#mdl_wsp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </div> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+
+    <!-- Slick-->
+    <!-- <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script> -->
+    <script src="assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <script src="assets/js/propper.min.js"></script>
+    <!-- <script src="assets/js/bootstrap.min.js"></script> -->
+    <!--to view items on reach-->
+    <script src="assets/js/jquery.appear.min.js"></script>
+    <!--Owl Slider-->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--number counters-->
+    <!-- <script src="assets/js/jquery-countTo.min.js"></script> -->
+    <!--Parallax Background-->
+    <script src="assets/js/parallaxie.min.js"></script>
+    <!--Cubefolio Gallery-->
+    <script src="assets/js/jquery.cubeportfolio.min.js"></script>
+    <!--Fancybox js-->
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <!--tooltip js-->
+    <script src="assets/js/tooltipster.min.js"></script>
+    <!--wow js-->
+    <!-- <script src="assets/js/wow.min.js"></script> -->
+
+    <!--Revolution SLider-->
+    <script src="assets/js/revolution/jquery.themepunch.tools.min.js"></script>
+    <script src="assets/js/revolution/jquery.themepunch.revolution.min.js"></script>
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS -->
+    <script src="assets/js/revolution/extensions/revolution.extension.actions.min.js"></script>
+    <script src="assets/js/revolution/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="assets/js/revolution/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="assets/js/revolution/extensions/revolution.extension.layeranimation.min.js"></script>
+    <!-- <script src="js/revolution/extensions/revolution.extension.migration.min.js"></script> -->
+    <script src="assets/js/revolution/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="assets/js/revolution/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="assets/js/revolution/extensions/revolution.extension.slideanims.min.js"></script>
+    <!-- <script src="js/revolution/extensions/revolution.extension.video.min.js"></script> -->
+    <!--custom functions and script-->
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/cmln.js"></script>
+    <script src="assets/js/cmln_2.js"></script>
+
+    <script>
+        // Esperar a que se cargue completamente la página (incluyendo CSS)
+        window.addEventListener('load', function () {
+            // Obtener el elemento con id div_menu_xs
+            var menu = document.getElementById('div_menu_xs');
+            // Retirar la clase d-none
+            if (menu) {
+                menu.classList.remove('d-none');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

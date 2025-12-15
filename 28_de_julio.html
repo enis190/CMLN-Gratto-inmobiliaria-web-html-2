@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gratto Inmobiliaria</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon-32x32.png">
+
+    <style>
+        .jm-loadingpage {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 999999999;
+            background-color: #004FEF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .jm-loadingpage table {
+            text-align: center;
+        }
+    </style>
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/revolution/navigation.min.css">
+    <link rel="stylesheet" href="assets/css/revolution/settings.min.css">
+    <link rel="stylesheet" href="assets/css/cmln-style.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/all.css">
+
+    <!-- <link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/revolution/navigation.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/revolution/settings.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/cmln-style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="styles.css">
+    </noscript> -->
+
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.min.css">
+
+
+</head>
+
+<body>
+
+
+    <div class="t_header"></div>
+
+    <!-- loader -->
+    <div class="jm-loadingpage ">
+        <table border="0">
+            <tr>
+                <td>
+                    <img class="img-fluid" src="assets/img/Logotype.png" loading="lazy">
+                </td>
+            </tr>
+            <tr>
+                <td><span class="loader"></span></td>
+            </tr>
+        </table>
+    </div>
+    <!-- end loader -->
+
+
+
+
+    <!-- Head -->
+    <div class="container-fluid header">
+        <div class="container">
+            <div class="row">
+                <div class="col-5 col-md-4 logo">
+                    <a href="/"><img src="assets/img/Logotype.png" alt="" class="img-fluid"></a>
+                </div>
+                <div class="col-7 col-md-6 offset-md-2 btns">
+                    <a href="proyectos_en_venta.html" class="btn-1 d-none d-md-inline">Proyectos en Venta</a>
+                    <a href="cotiza_aqui.html" class="btn-2">Cotiza Aquí <i class="fa-solid fa-inbox"></i></a>
+                    <a href="#" class="btn-2" id="btn-menu-xs-abrir"><i class="fa-sharp fa-solid fa-bars"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="div_menu_xs" class="container menu-xs d-flex" style="z-index: 9999999; ">
+        <div class="container d-block d-sm-flex">
+            <div class="row w-100">
+                <div class="col-12 position-relative">
+                    <div class="d-block block-1">
+                        <div>
+                            <div class="row ">
+                                <div class="col-12 item cerrar">
+                                    <span>
+                                        <i id="btn-menu-xs-cerrar" class="fa-solid fa-xmark fa-cmln"></i>
+                                    </span>
+                                </div>
+                                <ul class="items">
+                                    <li class="item active"><a href="proyectos_en_venta.html"
+                                            class="main_link active">Proyectos en Venta</a>
+                                    </li>
+
+                                    <li class="item "><a href="proyectos_entregados.html" class="main_link">Proyectos
+                                            Entregados</a></li>
+                                    <li class="item "><a href="quienes_somos.html" class="main_link">¿Quiénes Somos?</a>
+                                    </li>
+                                    <li class="item "><a href="cotiza_aqui.html" class="main_link">Cotiza Aquí</a></li>
+                                    <li class="item "><a href="plan_de_referidos.html" class="main_link">Plan de
+                                            Referidos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row block-footer">
+                            <div class="col-12 redes">
+                                <ul class="">
+                                    <li><a href="#" target="_blank"><span><i
+                                                    class="fa-brands fa-facebook-f c-fa"></i></span></a>
+                                    </li>
+                                    <li><a href="#" target="_blank"><span><i
+                                                    class="fa-brands fa-instagram c-fa"></i></span></a>
+                                    </li>
+                                </ul>
+                                <p class="phone">
+                                    <a href="#"><i class="fa-solid fa-phone-hangup"></i> 933 234 249</a>
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <div class="c-block">
+                                    <div class="cta">
+                                        <div class="cuadro-1">
+                                            <p>
+                                                <a href="#" target="_blank">Términos y Condiciones</a> | <a href="#"
+                                                    target="_blank">Políticas de Privacidad</a>
+                                            </p>
+                                        </div>
+                                        <div class="cuadro-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- slider -->
+    <div id="slider_page" class="container-fluid c-slider c-slider-proyecto ">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-block">
+                    <section id="main-banner-area" class="position-relative">
+                        <div id="rev_slider_4_1_wrapper"
+                            class="rev_slider_wrapper fullwidthbanner-container m-0 p-0 bg-dark"
+                            data-alias="classic4export" data-source="gallery">
+                            <!-- START REVOLUTION SLIDER 5.4.1 fullwidth mode -->
+                            <div id="rev_slider_4_1" class="rev_slider fullwidthabanner white" data-version="5.4.1">
+                                <ul>
+
+
+                                    <li data-index="rs-01" class="slide1" data-transition="fade"
+                                        data-slotamount="default" data-easein="Power100.easeIn"
+                                        data-easeout="Power100.easeOut" data-masterspeed="2000"
+                                        data-fsmasterspeed="1500" data-param1="01" class="item item1">
+                                        <!-- MAIN IMAGE -->
+                                        <img src="assets/img/slider_proyecto_1_1.png" alt=""
+                                            data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
+                                            data-bgparallax="10" class="rev-slidebg" data-no-retina>
+
+                                        <!-- LAYER NR. 1 -->
+                                        <div class="tp-caption tp-resizeme caption-1"
+                                            data-x="['left','left','left','left']" data-hoffset="['0','20','15','15']"
+                                            data-y="['bottom','bottom','bottom','bottom']"
+                                            data-voffset="['0','20','20','20']" data-width="['500','450','400','400']"
+                                            data-height="none" data-type="text"
+                                            data-textAlign="['left','left','left','left']" data-responsive_offset="on"
+                                            data-start="800" data-frames='[
+                                            {
+                                                "delay":1200,
+                                                "speed":0,
+                                                "frame":"0",
+                                                "from":"opacity:0;",
+                                                "to":"o:1;",
+                                                "ease":"none"
+                                            }
+                                            ]'>
+
+                                            <div class="det-proyecto background-2">
+                                                <h2 class="titulo-2">Av. 28 de Julio 360</h2>
+                                                <p class="distrito mb-4">Miraflores</p>
+                                                <h3 class="titulo-3">Flats y Dúplex</h3>
+                                                <p class="mb-4">A pasos del Malecón de Miraflores.</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><i class="fa-light fa-bed-front"></i> A pasos del Malecón de
+                                                            Miraflores</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><i class="fa-regular fa-ruler-horizontal"></i> De 60 m² a 120
+                                                            m²</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><i class="fa-regular fa-location-dot"></i> Miraflores, Av. 28
+                                                            de Julio 360</p>
+                                                    </li>
+                                                </ul>
+                                                <h5 class="mt-4">Proyecto en Construcción</h5>
+                                                <div class="c-buttons mt-4">
+                                                    <a href="#" class="btn-3">Cotiza Aquí <i
+                                                            class="fa-solid fa-inbox"></i></a>
+                                                    <a href="#" class="btn-4">Descargar Brochure</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+
+                                    <li data-index="rs-02" class="slide1" data-transition="fade"
+                                        data-slotamount="default" data-easein="Power100.easeIn"
+                                        data-easeout="Power100.easeOut" data-masterspeed="2000"
+                                        data-fsmasterspeed="1500" data-param1="01" class="item item1">
+                                        <!-- MAIN IMAGE -->
+                                        <img src="assets/img/slider_proyecto_1_2.png" alt=""
+                                            data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
+                                            data-bgparallax="10" class="rev-slidebg" data-no-retina>
+
+                                        <!-- LAYER NR. 1 -->
+                                        <div class="tp-caption tp-resizeme caption-1"
+                                            data-x="['left','left','left','left']" data-hoffset="['0','20','15','15']"
+                                            data-y="['bottom','bottom','bottom','bottom']"
+                                            data-voffset="['0','20','20','20']" data-width="['500','450','400','400']"
+                                            data-height="none" data-type="text"
+                                            data-textAlign="['left','left','left','left']" data-responsive_offset="on"
+                                            data-start="800" data-frames='[
+                                            {
+                                                "delay":1200,
+                                                "speed":0,
+                                                "frame":"0",
+                                                "from":"opacity:0;",
+                                                "to":"o:1;",
+                                                "ease":"none"
+                                            }
+                                            ]'>
+
+                                            <div class="det-proyecto background-2">
+                                                <h2 class="titulo-2">Av. 28 de Julio 360</h2>
+                                                <p class="distrito mb-4">Miraflores</p>
+                                                <h3 class="titulo-3">Flats y Dúplex</h3>
+                                                <p class="mb-4">A pasos del Malecón de Miraflores.</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><i class="fa-light fa-bed-front"></i> A pasos del Malecón de
+                                                            Miraflores</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><i class="fa-regular fa-ruler-horizontal"></i> De 60 m² a 120
+                                                            m²</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><i class="fa-regular fa-location-dot"></i> Miraflores, Av. 28
+                                                            de Julio 360</p>
+                                                    </li>
+                                                </ul>
+                                                <h5 class="mt-4">Proyecto en Construcción</h5>
+                                                <div class="c-buttons mt-4">
+                                                    <a href="#" class="btn-3">Cotiza Aquí <i
+                                                            class="fa-solid fa-inbox"></i></a>
+                                                    <a href="#" class="btn-4">Descargar Brochure</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <!--Main Slider ends -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid proyecto distrito c-container background-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 fachada">
+                    <center>
+                        <img src="assets/img/distrito_proyecto_1.png" alt="" class="img-fluid">
+                    </center>
+                </div>
+                <div class="col-md-5 offset-md-1 txt">
+                    <h2 class="titulo-2 color-1">Vive en el corazón de Miraflores.</h2>
+                    <p>Exclusivo edificio multifamiliar con Flats y Dúplex desde 60 m2. Departamentos de 2 y 3
+                        habitaciones, espacios funcionales, con acabados de calidad y excelente iluminación. Además
+                        cuenta con estacionamientos paralelos y depósitos.</p>
+                    <div class="c-foot">
+                        <p><i class="fa-sharp fa-solid fa-apartment"></i> 112 departamentos</p>
+                        <p><i class="fa-sharp fa-solid fa-stairs"></i> 17 pisos + azotea</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- cronologia -->
+    <div class="container-fluid home_cronologia proyecto">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="titulo-2 color-1">Conoce <br>Nuestras Áreas</h2>
+                </div>
+                <div class="col-6 botones">
+                    <div class="btn-3 d-none d-md-inline" id="btn_proyecto_interiores">Interiores</div>
+                    <div class="btn-4 d-none d-md-inline" id="btn_proyecto_areas">Áreas Comunes</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row d-none">
+            <div class="col-12 ">
+                <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list"
+                        href="#list-home" role="tab" aria-controls="list-home">Home</a>
+                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
+                        href="#list-profile" role="tab" aria-controls="list-profile">Profile</a>
+
+                </div>
+            </div>
+            <div class="col-12">
+
+            </div>
+        </div>
+
+
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                <!-- Interiores -->
+                <div class="row cont-slider">
+                    <div class="col-12 col-slider">
+                        <section class="slider center-5 c-responsive_center">
+
+                            <div class="item ">
+                                <img src="assets/img/interior_proyecto_1_1.png" alt="" class="img-fluid">
+                                
+                            </div>
+                            <div class="item ">
+                                <img src="assets/img/interior_proyecto_1_2.png" alt="" class="img-fluid">
+                                
+                            </div>
+
+                            <div class="item ">
+                                <img src="assets/img/interior_proyecto_1_3.png" alt="" class="img-fluid">
+                                
+                            </div>
+                            <div class="item ">
+                                <img src="assets/img/interior_proyecto_1_4.png" alt="" class="img-fluid">
+                                
+                            </div>
+                            
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                <div class="row cont-slider">
+                    <div class="col-12 col-slider">
+                        <section class="slider center-6 c-responsive_center">
+
+                            <div class="item ">
+                                <img src="assets/img/areas_proyecto_1_1.png" alt="" class="img-fluid">
+                                
+                            </div>
+                            <div class="item ">
+                                <img src="assets/img/areas_proyecto_1_2.png" alt="" class="img-fluid">
+                                
+                            </div>
+
+                            <div class="item ">
+                                <img src="assets/img/areas_proyecto_1_3.png" alt="" class="img-fluid">
+                                
+                            </div>
+                            <div class="item ">
+                                <img src="assets/img/areas_proyecto_1_4.png" alt="" class="img-fluid">
+                                
+                            </div>
+                            
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    
+
+    <div class="container-fluid quienes_somos c-container background-3 proyecto" style="background-image: url('assets/img/bg-1.png');">
+        <div class="container f-container">
+            <div class="row">
+                <div class="col-md-10 c-text">
+                    <div class="d-block c-block">
+                        <h2 class="titulo-2">Estilos que se reflejan <br> en los detalles.</h2>
+                    </div>
+                </div>
+                <div class="col-md-2 c-diagonal">
+                    <div class="d-block c-block">
+
+                    </div>
+                    <div class="d-block c-block-2">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+    <div class="container-fluid background-1 c-container mapa proyecto">
+        <div class="container mb-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a href="#" style="background-image: url('assets/img/bg-recorrido-1.png');">
+                        <span>
+                            <p>Recorrido 360</p>
+                            <p>Ver video</p>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container ubicacion mt-5">
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="titulo-2">Ubicación</h2>
+                </div>
+                <div class="col-6 botones">
+                    <div class="btn-2 d-none d-md-inline" >Ver en Google Maps</div>
+                    <div class="btn-4 d-none d-md-inline" >Ver en Waze</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.903350261003!2d-77.0380555256197!3d-12.118765088123705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c83d33f7ed47%3A0x32c0d04e2a50ab11!2sAv.%20Jos%C3%A9%20Pardo%20664%2C%20Miraflores%2015074!5e0!3m2!1ses!2spe!4v1765778627593!5m2!1ses!2spe" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid background-3 cotiza_aqui c-container ">
+        <div class="container block-2">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="titulo-2-min color-1">Av. 28 de Julio 360</h2>
+                    <p>Déjanos tus datos y pronto un asesor se contactará contigo.</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6 plano">
+                    <label for="">Plano</label>
+                    <center>
+                        <img src="assets/img/plano.png" alt="" class="img-fluid">
+                    </center>
+                </div>
+                <div class="col-md-6 form">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6 content-control mb-3">
+                                        <label for="inputState">Nombre*</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="col-md-6 content-control mb-3">
+                                        <label for="inputState">Apellidos*</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 content-control mb-3">
+                                        <label for="inputState">Teléfono*</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="col-md-6 content-control mb-3">
+                                        <label for="inputState">Correo electrónico*</label>
+                                        <input type="email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 content-control mb-3">
+                                        <label for="inputState">Tipo de documento*</label>
+                                        <select id="inputState" class="form-control">
+                                            <option selected>Seleccionar</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 content-control mb-3">
+                                        <label for="inputState">Número de documento*</label>
+                                        <input type="email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 content-control mb-3">
+                                        <label for="inputState">Proyecto de interés*</label>
+                                        <select id="inputState" class="form-control">
+                                            <option selected>Seleccionar</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 content-control mb-3">
+                                        <label for="inputState">Cantidad de dormitorios*</label>
+                                        <select id="inputState" class="form-control">
+                                            <option selected>Seleccionar</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 content-control mb-3">
+                                        <label for="inputState">Mensaje</label>
+                                        <textarea class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 content-control mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                            <label class="form-check-label" for="checkDefault">
+                                                He leído y acepto los <a href="terminos_y_condiciones.html" target="_blank">Términos y Condiciones</a> de Gratto Inmobiliaria.
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 content-control mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                            <label class="form-check-label" for="checkDefault">
+                                                Autorizo a Gratto Inmobiliaria para que realice las actividades de prospección comercial y marketing descritas en la <a href="politica_de_privacidad.html" target="_blank">Política de Privacidad</a>.
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="mt-4 min">(*) Campos obligatorios</p>
+                                    </div>
+                                    <div class="col-md-12 content-control mb-3 text-center">
+                                        <button type="submit" class="btn-1 background-1 color-2">Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid c-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 block-1">
+                    <h2 class="titulo-2 color-1">Elegir bien, eso es <br> buen gusto.</h2>
+                    <ul class="redes">
+                        <li><a href="#" target="_blank"><span><i class="fa-brands fa-facebook-f c-fa"></i></span></a>
+                        </li>
+                        <li><a href="#" target="_blank"><span><i class="fa-brands fa-instagram c-fa"></i></span></a>
+                        </li>
+                    </ul>
+                    <p>2025 – GRATTO INMOBILIARIA ® <br> Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 block-2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li><a href="proyectos_en_venta.html">Proyectos en Venta</a></li>
+                                <li><a href="proyectos_entregados.html">Proyectos Entregados</a></li>
+                                <li><a href="quienes_somos.html">¿Quiénes Somos?</a></li>
+                                <li><a href="cotiza_aqui.html">Cotiza Aquí</a></li>
+                                <li><a href="plan_de_referidos.html">Plan de Referidos</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="tyc">
+                                <li><a href="terminos_y_condiciones.html">Términos y Condiciones</a></li>
+                                <li><a href="politica_de_privacidad.html">Políticas de Privacidad</a></li>
+                                <li><a href="#"><i class="fa-solid fa-phone-hangup"></i> 933 234 249</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <center>
+                        <img src="assets/img/Logo-footer.png" alt="" class="img-fluid mt-5 mb-4">
+                    </center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="small">*Todas las imágenes, planos, medidas y áreas son referenciales por lo que podrían
+                        sufrir cambios al momento de desarrollarse el proyecto, asimismo los elementos decorativos,
+                        acabados y mobiliarios son propuestas del departamento de diseño que no se incluyen en la oferta
+                        comercial y no comprometen a la empresa inmobiliaria.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <a href="https://api.whatsapp.com/send?phone=51936636289&text=Estoy%20interesado%20en%20el%20proyecto%20de%20Brasil"
+        target="_blank" class="c-wsp pulse">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a> -->
+
+
+
+
+
+
+    <a href="javascript:click_section('t_header')" class="c-subir"><i class="fa fa-angle-up"></i></a>
+
+
+    <!-- <div class="c-wsp pulse" data-bs-toggle="modal" data-bs-target="#mdl_wsp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </div> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+
+    <!-- Slick-->
+    <!-- <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script> -->
+    <script src="assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <script src="assets/js/propper.min.js"></script>
+    <!-- <script src="assets/js/bootstrap.min.js"></script> -->
+    <!--to view items on reach-->
+    <script src="assets/js/jquery.appear.min.js"></script>
+    <!--Owl Slider-->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--number counters-->
+    <!-- <script src="assets/js/jquery-countTo.min.js"></script> -->
+    <!--Parallax Background-->
+    <script src="assets/js/parallaxie.min.js"></script>
+    <!--Cubefolio Gallery-->
+    <script src="assets/js/jquery.cubeportfolio.min.js"></script>
+    <!--Fancybox js-->
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <!--tooltip js-->
+    <script src="assets/js/tooltipster.min.js"></script>
+    <!--wow js-->
+    <!-- <script src="assets/js/wow.min.js"></script> -->
+
+    <!--Revolution SLider-->
+    <script src="assets/js/revolution/jquery.themepunch.tools.min.js"></script>
+    <script src="assets/js/revolution/jquery.themepunch.revolution.min.js"></script>
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS -->
+    <script src="assets/js/revolution/extensions/revolution.extension.actions.min.js"></script>
+    <script src="assets/js/revolution/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="assets/js/revolution/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="assets/js/revolution/extensions/revolution.extension.layeranimation.min.js"></script>
+    <!-- <script src="js/revolution/extensions/revolution.extension.migration.min.js"></script> -->
+    <script src="assets/js/revolution/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="assets/js/revolution/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="assets/js/revolution/extensions/revolution.extension.slideanims.min.js"></script>
+    <!-- <script src="js/revolution/extensions/revolution.extension.video.min.js"></script> -->
+    <!--custom functions and script-->
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/cmln.js"></script>
+
+
+
+
+
+
+
+
+
+    <script>
+
+    </script>
+
+
+    <script src="assets/js/cmln_2.js"></script>
+
+
+
+    <script src="assets/js/luxon.min.js"></script>
+    <script>
+        const fechaEvento = luxon.DateTime.fromISO('2025-03-21T23:59:59', {
+            zone: 'America/Lima'
+        });
+
+        function actualizarContador() {
+            // Obtener la zona horaria local del navegador del usuario
+            const zonaHorariaLocal = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+            // Obtener la fecha y hora actual en la zona horaria local del navegador del usuario
+            const ahora = luxon.DateTime.local().setZone(zonaHorariaLocal);
+
+            const diferencia = fechaEvento.diff(ahora);
+
+            if (diferencia.as('milliseconds') > 0) {
+                const {
+                    days,
+                    hours,
+                    minutes,
+                    seconds
+                } = diferencia.shiftTo('days', 'hours', 'minutes', 'seconds').toObject();
+
+                document.getElementById('dias').innerHTML = `${String(days).padStart(2, '0')}`;
+                document.getElementById('horas').innerHTML = `${String(hours).padStart(2, '0')}`;
+                document.getElementById('minutos').innerHTML = `${String(minutes).padStart(2, '0')}`;
+                document.getElementById('segundos').innerHTML = `${String(Math.floor(seconds)).padStart(2, '0')}`;
+            } else {
+                document.getElementById('dias').innerHTML = '00';
+                document.getElementById('horas').innerHTML = '00';
+                document.getElementById('minutos').innerHTML = '00';
+                document.getElementById('segundos').innerHTML = '00';
+            }
+        }
+
+        //setInterval(actualizarContador, 1000);
+    </script>
+
+
+
+    <script>
+        // Esperar a que se cargue completamente la página (incluyendo CSS)
+        window.addEventListener('load', function () {
+            // Obtener el elemento con id div_menu_xs
+            var menu = document.getElementById('div_menu_xs');
+            // Retirar la clase d-none
+            if (menu) {
+                menu.classList.remove('d-none');
+            }
+        });
+    </script>
+
+
+
+
+
+</body>
+
+</html>

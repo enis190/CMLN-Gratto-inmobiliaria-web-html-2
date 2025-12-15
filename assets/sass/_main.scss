@@ -3,18 +3,40 @@ $COLOR_1: #252625;
 $COLOR_2: #C5E3CC;
 $COLOR_3: #F5F1E6;
 $COLOR_4: #E3DBCE;
+$COLOR_5: #C1B19F;
+
+body{
+  background-color: $COLOR_1;
+}
 
 .color-1{
   color: $COLOR_1;
 }
 .color-2{
-  color: $COLOR_2;
+  color: $COLOR_2 !important;
 }
 .color-3{
   color: $COLOR_3;
 }
 .color-4{
   color: $COLOR_4;
+}
+
+
+.background-1{
+  background-color: $COLOR_1 !important;
+}
+.background-2{
+  background-color: $COLOR_2;
+}
+.background-3{
+  background-color: $COLOR_3;
+}
+.background-4{
+  background-color: $COLOR_4;
+}
+.background-5{
+  background-color: $COLOR_5;
 }
 
 /*LOADER*/
