@@ -31,15 +31,30 @@
     &.home_cronologia {
         .botones {
             text-align: right;
-
+                display: ruby;
+            p{
+                
+            }
             .btn-3 {
                 border-radius: 3px 0px 0px 3px;
+                margin-left: -5px;
+                background-color: transparent;
+                color: $COLOR_1;
+                transition: 0.3s;
             }
 
             .btn-4 {
                 border-radius: 0px 3px 3px 0px;
                 margin-left: -5px;
                 background-color: transparent;
+                transition: 0.3s;
+            }
+
+            .btn-3, .btn-4{
+                &.active{
+                    background-color: $COLOR_1;
+                    color: #FFF;
+                }
             }
         }
 

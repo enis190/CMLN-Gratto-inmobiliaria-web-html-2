@@ -298,8 +298,8 @@ $('#btn_proyecto_interiores').on('click', function () {
         document.querySelector('#list-home-list')
     );
     tab.show();
-    $(this).removeClass('btn-4').addClass('btn-3');
-    $('#btn_proyecto_areas').removeClass('btn-3').addClass('btn-4');
+    $(this).addClass('active');
+    $('#btn_proyecto_areas').removeClass('active');
 });
 
 $('#btn_proyecto_areas').on('click', function () {
@@ -307,8 +307,8 @@ $('#btn_proyecto_areas').on('click', function () {
         document.querySelector('#list-profile-list')
     );
     tab.show();
-    $(this).removeClass('btn-4').addClass('btn-3');
-    $('#btn_proyecto_interiores').removeClass('btn-3').addClass('btn-4');
+    $(this).addClass('active');
+    $('#btn_proyecto_interiores').removeClass('active');
 });
 
 // Para que no exista delay cuando de slick en tapánel

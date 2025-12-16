@@ -7,13 +7,13 @@ $(document).ready(function () {
 });
 
 /**HEADER */
-$(window).scroll(function () {
-    if (window.scrollY > $("#slider_page").offset().top) {
-        $('#header_page').addClass('c-fixed');
-    } else {
-        $('#header_page').removeClass('c-fixed');
-    }
-});
+// $(window).scroll(function () {
+//     if (window.scrollY > $("#slider_page").offset().top) {
+//         $('#header_page').addClass('c-fixed');
+//     } else {
+//         $('#header_page').removeClass('c-fixed');
+//     }
+// });
 
 /**WSP */
 $(".c-wsp_old").click(function () {
