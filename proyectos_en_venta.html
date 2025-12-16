@@ -151,42 +151,49 @@
 
 
 
-    <div class="container-fluid home_proyectos mt-5">
+    <div class="container-fluid home_proyectos">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <h2 class="titulo-2 color-2">Nuestros <br>Proyectos en Venta</h2>
                 </div>
                 <div class="col-md-7 offset-md-1">
-                    <form>
+                    <form id="buscar_proyecto">
                         <div class="row">
                             <div class="col-md-10">
                                 <div class="row">
                                     <div class="col-md-4 content-control">
                                         <label for="inputState">Estado del Proyecto</label>
-                                        <select id="inputState" class="form-control">
-                                            <option selected>Seleccionar</option>
-                                            <option>...</option>
+                                        <select id="estado" name="estado" class="form-control">
+                                            <option hidden>Seleccionar</option>
+                                            <option data-estado="pre-venta">Proyecto en Pre Venta</option>
+                                            <option data-estado="en-construccion">Proyecto en Construcción</option>
+                                            <option data-estado="en-lanzamiento">Proyecto en Lanzamiento</option>
                                         </select>
                                     </div>
                                     <div class="col-md-4 content-control">
                                         <label for="inputState">Distrito</label>
-                                        <select id="inputState" class="form-control">
-                                            <option selected>Seleccionar</option>
-                                            <option>...</option>
+                                        <select id="distrito" name="distrito" class="form-control">
+                                            <option hidden>Seleccionar</option>
+                                            <option data-distrito="surquillo">Surquillo</option>
+                                            <option data-distrito="miraflores">Miraflores</option>
+                                            <option data-distrito="san-isidro">San Isidro</option>
                                         </select>
                                     </div>
                                     <div class="col-md-4 content-control">
                                         <label for="inputState">Habitaciones</label>
-                                        <select id="inputState" class="form-control">
-                                            <option selected>Seleccionar</option>
-                                            <option>...</option>
+                                        <select id="habitaciones" name="habitaciones" class="form-control">
+                                            <option hidden>Seleccionar</option>
+                                            <option data-habitaciones="1">1</option>
+                                            <option data-habitaciones="2">2</option>
+                                            <option data-habitaciones="3">3</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-2">
-                                <a class="btn-1 d-block text-center">Buscar</a>
+                                
+                                <button type="submit" class="btn-1 d-block text-center">Buscar</button>
                             </div>
                         </div>
                     </form>
@@ -194,7 +201,7 @@
             </div>
 
             <div class="row blocks-1 mt-5">
-                <div class="col-md-8 proyecto">
+                <div class="col-md-8 proyecto" id="i_block_1">
                     <div class="d-block">
                         <div class="img">
                             <img src="assets/img/img-proyecto-1.png" alt="" class="img-fluid">
@@ -208,17 +215,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 cta d-none d-md-inline-flex">
+                <div class="col-md-4 cta d-none d-md-inline-flex" id="i_block_2">
                     <div class="c-block">
                         <div class="cuadro-1"></div>
                         <div class="cuadro-2"></div>
                     </div>
                     <h2 class="titulo-2 color-2">Elegir bien, <br> eso es buen <br> gusto.</h2>
                 </div>
-            </div>
+            <!-- </div>
 
-            <div class="row blocks-1 ">
-                <div class="col-md-7 proyecto mt-4">
+            <div class="row blocks-1 "> -->
+                <div class="col-md-7 proyecto mt-4" id="i_block_3">
                     <div class="d-block">
                         <div class="img">
                             <img src="assets/img/img-proyecto-2.png" alt="" class="img-fluid">
@@ -232,7 +239,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-5 proyecto mt-4">
+                <div class="col-md-5 proyecto mt-4" id="i_block_4">
                     <div class="d-block">
                         <div class="img">
                             <img src="assets/img/img-proyecto-3.png" alt="" class="img-fluid">
@@ -246,10 +253,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            <!-- </div>
 
-            <div class="row blocks-1 ">
-                <div class="col-md-5 proyecto mt-4">
+            <div class="row blocks-1 "> -->
+                <div class="col-md-5 proyecto mt-4" id="i_block_5">
                     <div class="d-block">
                         <div class="img">
                             <img src="assets/img/img-proyecto-4.png" alt="" class="img-fluid">
@@ -263,7 +270,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-7 proyecto mt-4">
+                <div class="col-md-7 proyecto mt-4" id="i_block_6">
                     <div class="d-block">
                         <div class="img">
                             <img src="assets/img/img-proyecto-5.png" alt="" class="img-fluid">

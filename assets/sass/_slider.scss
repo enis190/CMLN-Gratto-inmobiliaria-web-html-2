@@ -50,7 +50,7 @@
 
     &.c-slider-proyecto {
         .tp-leftarrow {
-            display: none;
+            display: none !important;
         }
 
         .tparrows.tp-rightarrow {
@@ -63,6 +63,8 @@
             }
         }
     }
+
+    
 }
 
 

@@ -316,3 +316,193 @@ $('#list-tab a').on('shown.bs.tab', function (e) {
     var target = $(e.target).attr('href'); // #list-home o #list-profile
     $(target).find('.slider').slick('setPosition');
 });
+
+
+// click buton form referidos
+document.querySelectorAll('.btns_interes_referido .btn')
+    .forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // quitar active de todos
+            document.querySelectorAll('.btns_interes_referido .btn')
+                .forEach(b => b.classList.remove('active'));
+
+            // agregar active al clickeado
+            this.classList.add('active');
+
+            // valor del data
+            const proyecto = this.dataset.proyecto;
+            console.log(proyecto);
+
+            // 👉 setear input
+            document.getElementById('proyecto_seleccionado').value = proyecto;
+        });
+    });
+
+
+
+
+// buscar proyecto
+$('#buscar_proyecto').on('submit', function (e) {
+    e.preventDefault(); // 1️⃣ bloquea la recarga
+
+    const estado = $('#estado option:selected').data('estado');
+    const distrito = $('#distrito option:selected').data('distrito');
+    const habitaciones = $('#habitaciones option:selected').data('habitaciones');
+
+    // 2️⃣ mostrar el data-estado en consola
+    console.log('estado: ' + estado);
+    console.log('distrito: ' + distrito);
+    console.log('habitaciones: ' + habitaciones);
+
+    $("#i_block_1").removeClass('col-md-8');
+    $("#i_block_1").addClass('col-md-6');
+    $("#i_block_1").addClass('mt-4');
+
+    $("#i_block_2").removeClass('d-md-inline-flex');
+
+    $("#i_block_3").removeClass('col-md-7');
+    $("#i_block_3").addClass('col-md-6');
+
+    $("#i_block_4").removeClass('col-md-5');
+    $("#i_block_4").addClass('col-md-6');
+
+    $("#i_block_5").removeClass('col-md-5');
+    $("#i_block_5").addClass('col-md-6');
+
+    $("#i_block_6").removeClass('col-md-7');
+    $("#i_block_6").addClass('col-md-6');
+
+
+    var i_block_1 = false;
+    var i_block_3 = false;
+    var i_block_4 = false;
+    var i_block_5 = false;
+    var i_block_6 = false;
+
+    /**estado */
+    if (estado) {
+        if (estado == 'pre-venta') {
+            i_block_1 = true;
+        }
+        if (estado == 'en-construccion') {
+            i_block_3 = true;
+            i_block_4 = true;
+            i_block_5 = true;
+        }
+        if (estado == 'en-lanzamiento') {
+            i_block_6 = true;
+        }
+    } else {
+        //alert('ninguno');
+        i_block_1 = true;
+        i_block_2 = true;
+        i_block_3 = true;
+        i_block_4 = true;
+        i_block_5 = true;
+        i_block_6 = true;
+    }
+
+
+    var j_block_1 = false;
+    var j_block_3 = false;
+    var j_block_4 = false;
+    var j_block_5 = false;
+    var j_block_6 = false;
+
+    /**distrito */
+    if (distrito) {
+        if (distrito == 'surquillo') {
+            j_block_1 = true;
+        }
+        if (distrito == 'miraflores') {
+            j_block_3 = true;
+            j_block_5 = true;
+            j_block_6 = true;
+        }
+        if (distrito == 'san-isidro') {
+            j_block_4 = true;
+        }
+    } else {
+        j_block_1 = true;
+        j_block_2 = true;
+        j_block_3 = true;
+        j_block_4 = true;
+        j_block_5 = true;
+        j_block_6 = true;
+    }
+
+
+    /**Habitaciones */
+    var k_block_1 = false;
+    var k_block_3 = false;
+    var k_block_4 = false;
+    var k_block_5 = false;
+    var k_block_6 = false;
+
+    if (habitaciones) {
+        if (habitaciones == '1') {
+            k_block_1 = true;
+            k_block_4 = true;
+            k_block_5 = true;
+        }
+        if (habitaciones == '2') {
+            k_block_1 = true;
+            k_block_3 = true;
+            k_block_4 = true;
+            k_block_5 = true;
+            k_block_6 = true;
+        }
+        if (habitaciones == '3') {
+            k_block_1 = true;
+            k_block_3 = true;
+            k_block_4 = true;
+            k_block_5 = true;
+            k_block_6 = true;
+        }
+    } else {
+        k_block_1 = true;
+        k_block_2 = true;
+        k_block_3 = true;
+        k_block_4 = true;
+        k_block_5 = true;
+        k_block_6 = true;
+    }
+
+
+
+    /**Mostrar resultado */
+    if (i_block_1 == false || j_block_1 == false || k_block_1 == false) {
+        $("#i_block_1").addClass('d-none');
+    } else {
+        $("#i_block_1").removeClass('d-none');
+    }
+
+    if (i_block_3 == false || j_block_3 == false || k_block_3 == false) {
+        $("#i_block_3").addClass('d-none');
+    } else {
+        $("#i_block_3").removeClass('d-none');
+    }
+
+    if (i_block_4 == false || j_block_4 == false || k_block_4 == false) {
+        $("#i_block_4").addClass('d-none');
+    } else {
+        $("#i_block_4").removeClass('d-none');
+    }
+
+    if (i_block_5 == false || j_block_5 == false || k_block_5 == false) {
+        $("#i_block_5").addClass('d-none');
+    } else {
+        $("#i_block_5").removeClass('d-none');
+    }
+
+    if (i_block_6 == false || j_block_6 == false || k_block_6 == false) {
+        $("#i_block_6").addClass('d-none');
+    } else {
+        $("#i_block_6").removeClass('d-none');
+    }
+
+});
+
+

@@ -119,7 +119,21 @@
 
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+    .proyecto.distrito {
+        .txt {
+            .c-foot{
+                position: inherit;
+            }
+        }
+    }
+    .proyecto.home_cronologia .botones{
+        display: contents;
+    }
+    .proyecto.quienes_somos .c-text{
+        border-right: 1px solid #F5F1E6;
+    }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {}

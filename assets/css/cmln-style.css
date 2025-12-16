@@ -1036,7 +1036,7 @@ p.min {
   color: #4F6A53;
 }
 .c-slider.c-slider-proyecto .tp-leftarrow {
-  display: none;
+  display: none !important;
 }
 .c-slider.c-slider-proyecto .tparrows.tp-rightarrow {
   background: none;
@@ -1917,6 +1917,123 @@ p.min {
   width: 100%;
   height: 450px;
   filter: grayscale(100%);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .proyecto.distrito .txt .c-foot {
+    position: inherit;
+  }
+  .proyecto.home_cronologia .botones {
+    display: contents;
+  }
+  .proyecto.quienes_somos .c-text {
+    border-right: 1px solid #F5F1E6;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+.referidos.quienes_somos .block-3 .c-block {
+  padding-top: inherit;
+  height: 100%;
+  position: relative;
+}
+.referidos.quienes_somos .block-3 .c-block.c-img {
+  padding: 0px;
+}
+.referidos.quienes_somos .block-3 .c-block .c-foot {
+  position: absolute;
+  width: 70%;
+  bottom: 30px;
+}
+.referidos .nros .txt p {
+  font-family: "WorkSans-Light";
+}
+.referidos .nros .nro .c-block {
+  border: 1px solid #A5ADA7;
+  height: 100%;
+  position: relative;
+}
+.referidos .nros .nro .c-block .c-foot {
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+.referidos .nros .nro .c-block .c-foot h2 {
+  font-family: "ScopeOne-Regular";
+  font-size: 3rem;
+}
+.referidos .nros .nro .c-block .c-foot h4 {
+  font-family: "WorkSans-Regular";
+  font-size: 1.1rem;
+}
+.referidos.cotiza_aqui .form .btns_interes_referido .btn {
+  background-color: #F5F1E6;
+  color: #939A94;
+  border: 1px solid #939A94;
+  width: 100%;
+  text-align: left;
+  border-radius: 3px;
+  margin-bottom: 7px;
+  transition: 0.3s;
+}
+.referidos.cotiza_aqui .form .btns_interes_referido .btn.active {
+  background-color: #252625;
+  color: #FFF;
+}
+.referidos.cotiza_aqui .form .btns_interes_referido .cta {
+  background-color: #E3DBCE;
+  display: flex;
+  justify-content: center;
+  /* horizontal */
+  align-items: center;
+  /* vertical */
+}
+.referidos.cotiza_aqui .form .btns_interes_referido .cta p {
+  margin-bottom: 0px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .referidos.cotiza_aqui .form .btns_interes_referido .cta {
+    min-height: 200px;
+  }
+  .referidos .nros .nro {
+    margin-bottom: 15px;
+  }
+  .referidos .nros .nro .c-block .c-foot {
+    position: relative;
+  }
+  .referidos.quienes_somos .block-3 .c-block {
+    padding: 20px;
+  }
+  .referidos.quienes_somos .block-3 .c-block .c-foot {
+    position: initial;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+.tyc-body {
+  background-color: #007F75;
+}
+.tyc-body.politica-body {
+  background-color: #7C6C5D;
+}
+.tyc-body .block-1 .c-block {
+  width: 100%;
+  border: 1px solid #F5F1E6;
+  padding: 25px;
+}
+.tyc-body .block-1 .c-block h1, .tyc-body .block-1 .c-block p {
+  color: #F5F1E6;
+}
+.tyc-body .block-1 .c-block p {
+  font-family: "WorkSans-Light";
 }
 
 /* Extra small devices (phones, 600px and down) */
