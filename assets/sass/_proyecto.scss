@@ -31,10 +31,10 @@
     &.home_cronologia {
         .botones {
             text-align: right;
-                display: ruby;
-            p{
-                
-            }
+            display: ruby;
+
+            p {}
+
             .btn-3 {
                 border-radius: 3px 0px 0px 3px;
                 margin-left: -5px;
@@ -50,8 +50,9 @@
                 transition: 0.3s;
             }
 
-            .btn-3, .btn-4{
-                &.active{
+            .btn-3,
+            .btn-4 {
+                &.active {
                     background-color: $COLOR_1;
                     color: #FFF;
                 }
@@ -65,6 +66,21 @@
                 &::after {
                     width: 0px;
                     height: 0px;
+                }
+            }
+
+            &.c-figure {
+                .item {
+                    figure {
+                        height: 280px;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
                 }
             }
         }
@@ -116,14 +132,17 @@
                 }
             }
         }
-        .ubicacion{
-            h2{
+
+        .ubicacion {
+            h2 {
                 color: #FFF;
             }
-            .botones{
+
+            .botones {
                 text-align: right;
             }
-            iframe{
+
+            iframe {
                 width: 100%;
                 height: 450px;
                 filter: grayscale(100%);
@@ -137,15 +156,17 @@
 @media only screen and (max-width: 600px) {
     .proyecto.distrito {
         .txt {
-            .c-foot{
+            .c-foot {
                 position: inherit;
             }
         }
     }
-    .proyecto.home_cronologia .botones{
+
+    .proyecto.home_cronologia .botones {
         display: contents;
     }
-    .proyecto.quienes_somos .c-text{
+
+    .proyecto.quienes_somos .c-text {
         border-right: 1px solid #F5F1E6;
     }
 }
