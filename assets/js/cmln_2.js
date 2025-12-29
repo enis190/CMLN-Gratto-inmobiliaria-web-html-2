@@ -506,3 +506,77 @@ $('#buscar_proyecto').on('submit', function (e) {
 });
 
 
+// Seleccionar plano form
+// document.getElementById('inputTipologia').addEventListener('change', function () {
+//     const opcion = this.options[this.selectedIndex];
+//     const tipologia = opcion.dataset.tipologia;
+
+//     if(tipologia){
+//         document.getElementById('img_plano_seleccionado').src = `assets/img/planos/${tipologia}.png`;
+//     }
+// });
+
+
+const select = document.getElementById('inputTipologia');
+const img    = document.getElementById('img_plano_seleccionado');
+const loader = document.getElementById('plano-overlay');
+
+select.addEventListener('change', function () {
+    const opcion = this.options[this.selectedIndex];
+    const tipologia = opcion.dataset.tipologia;
+    if(!tipologia) return;
+
+    // Mostrar loader
+    loader.classList.remove('d-none');
+
+    // Forzar recarga limpia
+    const nuevaImagen = `assets/img/planos/${tipologia}.png`;
+
+    // Esperar a que la imagen termine de cargar
+    const tempImg = new Image();
+    tempImg.src = nuevaImagen;
+
+    tempImg.onload = function () {
+        img.src = nuevaImagen;
+        loader.classList.add('d-none'); // ocultar loader cuando ya cargó
+    };
+
+    tempImg.onerror = function(){
+        loader.classList.add('d-none'); // por si falla igual ocultamos
+        console.warn('No se pudo cargar la imagen:', nuevaImagen);
+    };
+});
+
+
+
+/**submit proyecto */
+const form = document.getElementById('form_proyecto');
+const respuesta = document.getElementById('respuesta_form');
+
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch('https://enis190development.uno/mail_send/gratto/', {
+        method: 'POST',
+        body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+
+        if(data.status === 'ok'){
+            // ocultar formulario
+            form.classList.add('d-none');
+            // mostrar mensaje
+            respuesta.classList.remove('d-none');
+        }else{
+            alert('Tu mensaje no fue enviado, intenta nuevamente ');
+        }
+
+    })
+    .catch(err => {
+        alert('Error de conexión. Intenta nuevamente ');
+        console.error(err);
+    });
+});

@@ -162,6 +162,40 @@
 }
 
 
+
+.plano-wrapper {
+    position: relative;
+    display: inline-block;
+    /* Se ajusta al tamaño de la imagen */
+}
+
+#img_plano_seleccionado {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.plano-overlay {
+    position: absolute;
+    inset: 0;
+    /* top:0 right:0 bottom:0 left:0 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    /* deja clickeable la imagen */
+    background: rgba(0, 0, 0, .7);
+
+    i {
+        font-size: 30px;
+        color: #fff;
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .4));
+    }
+}
+
+
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .proyecto.distrito {
