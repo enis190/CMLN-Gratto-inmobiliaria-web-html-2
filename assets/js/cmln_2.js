@@ -518,13 +518,13 @@ $('#buscar_proyecto').on('submit', function (e) {
 
 
 const select = document.getElementById('inputTipologia');
-const img    = document.getElementById('img_plano_seleccionado');
+const img = document.getElementById('img_plano_seleccionado');
 const loader = document.getElementById('plano-overlay');
 
 select.addEventListener('change', function () {
     const opcion = this.options[this.selectedIndex];
     const tipologia = opcion.dataset.tipologia;
-    if(!tipologia) return;
+    if (!tipologia) return;
 
     // Mostrar loader
     loader.classList.remove('d-none');
@@ -541,7 +541,7 @@ select.addEventListener('change', function () {
         loader.classList.add('d-none'); // ocultar loader cuando ya cargó
     };
 
-    tempImg.onerror = function(){
+    tempImg.onerror = function () {
         loader.classList.add('d-none'); // por si falla igual ocultamos
         console.warn('No se pudo cargar la imagen:', nuevaImagen);
     };
@@ -549,34 +549,93 @@ select.addEventListener('change', function () {
 
 
 
+
+
+/** Utms */
+// Capturar UTMs de la URL
+const params = new URLSearchParams(window.location.search);
+
+const utmMap = {
+    utm_campaign: 'UtmCampaignEVOLTA',
+    utm_content: 'UtmContentEVOLTA',
+    utm_medium: 'UtmMediumEVOLTA',
+    utm_source: 'UtmSourceEVOLTA',
+    utm_term: 'UtmTermEVOLTA'
+};
+
+Object.keys(utmMap).forEach(utm => {
+    if (params.has(utm)) {
+        const value = params.get(utm);
+        const input = document.getElementById(utmMap[utm]);
+
+        if (input) {
+            input.value = value;
+        }
+    }
+});
+
+
+/**Selecciona proyecto cotiza: */
+
+const selectSede = document.getElementById('evolta_email0');
+const hiddenEmail = document.querySelector('input[name="evolta_email"]');
+
+if (selectSede) {
+    selectSede.addEventListener('change', function () {
+        const selectedOption = this.options[this.selectedIndex];
+        const email = selectedOption.getAttribute('data-emnailevolta');
+
+        if (email) {
+            hiddenEmail.value = email;
+        } else {
+            hiddenEmail.value = '';
+        }
+    });
+}
+
+
+
+
 /**submit proyecto */
 const form = document.getElementById('form_proyecto');
 const respuesta = document.getElementById('respuesta_form');
+const btn_submit = document.getElementById('btn_submit');
 
-form.addEventListener('submit', function(e){
+form.addEventListener('submit', function (e) {
     e.preventDefault();
+    btn_submit.innerHTML = 'Enviando...';
+
+    const inputs = form.querySelectorAll('input, textarea, select');
+    inputs.forEach(el => {
+        el.readOnly = true;
+        el.style.pointerEvents = 'none';
+    });
+
+    btn_submit.disabled = true;
+
 
     const formData = new FormData(form);
 
-    fetch('https://enis190development.uno/mail_send/gratto/', {
+    fetch('https://imsgsolution.com/mail/sendmail-gratto.php', {
         method: 'POST',
         body: formData
     })
-    .then(res => res.json())
-    .then(data => {
+        .then(res => res.json())
+        .then(data => {
 
-        if(data.status === 'ok'){
-            // ocultar formulario
-            form.classList.add('d-none');
-            // mostrar mensaje
-            respuesta.classList.remove('d-none');
-        }else{
-            alert('Tu mensaje no fue enviado, intenta nuevamente ');
-        }
+            if (data.status === 'ok') {
+                // ocultar formulario
+                form.classList.add('d-none');
+                // mostrar mensaje
+                respuesta.classList.remove('d-none');
+            } else {
+                alert('Tu mensaje no fue enviado, intenta nuevamente ');
+                console.log(data);
+            }
 
-    })
-    .catch(err => {
-        alert('Error de conexión. Intenta nuevamente ');
-        console.error(err);
-    });
+        })
+        .catch(err => {
+            alert('Error de conexión. Intenta nuevamente ');
+            console.error(err);
+        });
 });

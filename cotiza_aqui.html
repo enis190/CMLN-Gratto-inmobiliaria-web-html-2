@@ -49,6 +49,11 @@
     <link rel="stylesheet" type="text/css" href="assets/slick/slick.min.css">
     <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.min.css">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17815079884"></script>
+    <script> window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'AW-17815079884'); </script>
+
 
 </head>
 
@@ -125,10 +130,12 @@
                                     <li><a href="#" target="_blank"><span><i
                                                     class="fa-brands fa-instagram c-fa"></i></span></a>
                                     </li>
-                                    <li><a href="#" target="_blank"><span><i class="fa-brands fa-linkedin-in c-fa"></i></span></a>
-                        </li>
-                        <li><a href="#" target="_blank"><span><i class="fa-brands fa-youtube c-fa"></i></span></a>
-                        </li>
+                                    <li><a href="#" target="_blank"><span><i
+                                                    class="fa-brands fa-linkedin-in c-fa"></i></span></a>
+                                    </li>
+                                    <li><a href="#" target="_blank"><span><i
+                                                    class="fa-brands fa-youtube c-fa"></i></span></a>
+                                    </li>
                                 </ul>
                                 <p class="phone">
                                     <a href="#"><i class="fa-solid fa-phone-hangup"></i> 933 234 249</a>
@@ -184,49 +191,73 @@
                     </center>
                 </div>
                 <div class="col-md-6 form">
-                    <form>
+                    <div class="d-none" id="respuesta_form">
+                        <h2 class="titulo-2-min color-1">Mensaje enviado</h2>
+                        <p>Muchas gracias por tu información, muy pronto uno de nuestros asesores se pondrá en contacto
+                            contigo</p>
+                    </div>
+                    <form id="form_proyecto">
+                        <select id="inputTipologia" name="inputTipologia" class="form-control d-none">
+                            <option hidden="">Seleccionar</option>
+                            <option data-tipologia="BENAVIDES_DUPLEX_701" selected>Seleccionar</option>
+
+
+                        </select>
+
+
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="row">
                                     <div class="col-md-6 content-control mb-3">
                                         <label for="inputState">Nombre*</label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" name="frm_nombre">
                                     </div>
                                     <div class="col-md-6 content-control mb-3">
                                         <label for="inputState">Apellidos*</label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" name="frm_apel">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 content-control mb-3">
                                         <label for="inputState">Teléfono*</label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" name="frm_tel">
                                     </div>
                                     <div class="col-md-6 content-control mb-3">
                                         <label for="inputState">Correo electrónico*</label>
-                                        <input type="email" class="form-control">
+                                        <input type="email" class="form-control" name="frm_email">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 content-control mb-3">
                                         <label for="inputState">Tipo de documento*</label>
-                                        <select id="inputState" class="form-control">
+                                        <select id="inputState" class="form-control" name="frm_tipo_docu">
                                             <option selected>Seleccionar</option>
-                                            <option>DNI</option>
-                                            <option>Carnet de extranjería</option>
+                                            <option value="1">DNI</option>
+                                            <option value="4">Carnet de extranjería</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6 content-control mb-3">
                                         <label for="inputState">Número de documento*</label>
-                                        <input type="email" class="form-control">
+                                        <input type="text" class="form-control" name="frm_dni">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 content-control mb-3">
                                         <label for="inputState">Proyecto de interés*</label>
-                                        <select id="inputState" class="form-control">
-                                            <option selected>Seleccionar</option>
-                                            <option>...</option>
+                                        <select id="evolta_email0" name="evolta_email0" class="form-control" required>
+                                            <option hidden="">Seleccionar</option>
+                                            <option data-emnailevolta="benavides1361_galeon@evolta.pe" >Aramburú 934 -
+                                                Surquillo</option>
+                                            <option data-emnailevolta="benavides1361_galeon@evolta.pe" >28 de Julio 360 -
+                                                Miraflores</option>
+                                            <option data-emnailevolta="benavides1361_galeon@evolta.pe" >Salaverry Avenue 2205
+                                                - San Isidro</option>
+                                            <option data-emnailevolta="benavides1361_galeon@evolta.pe" >Villareal 337 -
+                                                Miraflores</option>
+                                            <option data-emnailevolta="benavides1361_galeon@evolta.pe" >Benavides 1361 -
+                                                Miraflores</option>
+
+
                                         </select>
                                     </div>
                                     <div class="col-md-6 content-control mb-3">
@@ -242,7 +273,7 @@
                                 <div class="row">
                                     <div class="col-md-12 content-control mb-3">
                                         <label for="inputState">Mensaje</label>
-                                        <textarea class="form-control"></textarea>
+                                        <textarea class="form-control" name="frm_coment"></textarea>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -250,7 +281,8 @@
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value="" id="checkDefault">
                                             <label class="form-check-label" for="checkDefault">
-                                                He leído y acepto los <a href="terminos_y_condiciones.html" target="_blank">Términos y Condiciones</a> de Gratto Inmobiliaria.
+                                                He leído y acepto los <a href="terminos_y_condiciones.html"
+                                                    target="_blank">Términos y Condiciones</a> de Gratto Inmobiliaria.
                                             </label>
                                         </div>
                                     </div>
@@ -260,7 +292,10 @@
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value="" id="checkDefault">
                                             <label class="form-check-label" for="checkDefault">
-                                                Autorizo a Gratto Inmobiliaria para que realice las actividades de prospección comercial y marketing descritas en la <a href="politica_de_privacidad.html" target="_blank">Política de Privacidad</a>.
+                                                Autorizo a Gratto Inmobiliaria para que realice las actividades de
+                                                prospección comercial y marketing descritas en la <a
+                                                    href="politica_de_privacidad.html" target="_blank">Política de
+                                                    Privacidad</a>.
                                             </label>
                                         </div>
                                     </div>
@@ -270,11 +305,21 @@
                                         <p class="mt-4 min">(*) Campos obligatorios</p>
                                     </div>
                                     <div class="col-md-12 content-control mb-3 text-center">
-                                        <button type="submit" class="btn-1 background-1 color-2">Enviar</button>
+                                        <button type="submit" class="btn-1 background-1 color-2"
+                                            id="btn_submit">Enviar</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <input type="hidden" name="proyecto" value="benavides_1361">
+                        <input type="hidden" name="evolta_email" value="">
+                        <input type="hidden" name="UtmCampaignEVOLTA" id="UtmCampaignEVOLTA">
+                        <input type="hidden" name="UtmContentEVOLTA" id="UtmContentEVOLTA">
+                        <input type="hidden" name="UtmMediumEVOLTA" id="UtmMediumEVOLTA">
+                        <input type="hidden" name="UtmSourceEVOLTA" id="UtmSourceEVOLTA">
+                        <input type="hidden" name="UtmTermEVOLTA" id="UtmTermEVOLTA">
+
+                        
                     </form>
                 </div>
             </div>
