@@ -790,6 +790,27 @@ p {
 
 
 
+.wsp-social{
+  background-color: #31d24e;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  box-shadow: 10px 7px 5px -8px rgba(0,0,0,0.2);
+-webkit-box-shadow: 10px 7px 5px -8px rgba(0,0,0,0.2);
+-moz-box-shadow: 10px 7px 5px -8px rgba(0,0,0,0.2);
+  a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.6rem;
+  }
+}
+
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
