@@ -64,7 +64,7 @@
         }
     }
 
-    
+
 }
 
 
@@ -102,6 +102,34 @@
     .c-slider {
         margin-top: 90px;
     }
+
+    .tp-caption,
+    .tp-resizeme {
+        position: relative;
+        /* o absolute según tu caso */
+        z-index: 99999;
+    }
+
+    .tp-mask-wrap,
+    .tp-parallax-wrap {
+        z-index: 1 !important;
+        display: none !important;
+    }
+
+    .rev_slider_wrapper,
+    .rev_slider,
+    .tp-overflow-hidden {
+        overflow: visible !important;
+    }
+
+    .c-slider-xs {
+        margin-top: 0px;
+        .det-proyecto {
+            padding: 20px;
+        }
+    }
+
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -120,14 +148,13 @@
         }
 
         &.c-slider-proyecto {
-            .tp-leftarrow {
-            }
+            .tp-leftarrow {}
 
             .tparrows.tp-rightarrow {
                 left: 97% !important;
                 top: 85% !important;
-                &::before {
-                }
+
+                &::before {}
             }
         }
 
