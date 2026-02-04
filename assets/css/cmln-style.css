@@ -1117,6 +1117,14 @@ p.min {
   .c-slider-xs .det-proyecto {
     padding: 20px;
   }
+  .c-slider-home .tp-mask-wrap,
+  .c-slider-home .tp-parallax-wrap {
+    z-index: 1 !important;
+    display: block !important;
+  }
+  .c-slider-home .titulo-1 {
+    font-size: 2rem !important;
+  }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* Medium devices (landscape tablets, 768px and up) */

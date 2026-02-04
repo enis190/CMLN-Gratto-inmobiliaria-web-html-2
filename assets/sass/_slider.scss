@@ -116,6 +116,8 @@
         display: none !important;
     }
 
+
+
     .rev_slider_wrapper,
     .rev_slider,
     .tp-overflow-hidden {
@@ -124,8 +126,21 @@
 
     .c-slider-xs {
         margin-top: 0px;
+
         .det-proyecto {
             padding: 20px;
+        }
+    }
+
+    .c-slider-home {
+
+        .tp-mask-wrap,
+        .tp-parallax-wrap {
+            z-index: 1 !important;
+            display: block !important;
+        }
+        .titulo-1{
+            font-size: 2rem !important;
         }
     }
 
