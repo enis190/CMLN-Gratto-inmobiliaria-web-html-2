@@ -1826,6 +1826,18 @@ p.min {
 }
 
 /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .quienes_somos .block-2 .item .c-txt p {
+    position: relative;
+    margin-top: 40px;
+  }
+  .quienes_somos .c-text {
+    border-right: 1px solid #5C605D;
+  }
+  .quienes_somos .c-diagonal .c-block {
+    display: none !important;
+  }
+}
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
 /* Large devices (laptops/desktops, 992px and up) */
